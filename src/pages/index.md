@@ -1,6 +1,6 @@
 ---
 templateKey: index-page
-title: Great coffee with a conscience
+title: Great veg with a conscience
 image: /img/home-jumbotron.jpg
 heading: Great coffee with a conscience
 subheading: Support sustainable farming while enjoying a cup
@@ -67,4 +67,5 @@ main:
   image3:
     alt: Coffee beans
     image: /img/products-grid1.jpg
+published: true
 ---
