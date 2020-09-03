@@ -1,8 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby + Netlify CMS Starter',
+    title: 'Picked Organic Market Garden',
     description:
-      'This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.',
+      'Picked Organic Market Garden, working with nature. Experience a taste sensation by buying vegetables that are picked when ripe and in season',
+    keywords:
+      'buy local, pesticide and chemical free, organic, market garden, vegetables, veg box, plastic free, zero waste, seasonal vegetables, minimise carbon footprint',  
   },
   plugins: [
     'gatsby-plugin-react-helmet',
