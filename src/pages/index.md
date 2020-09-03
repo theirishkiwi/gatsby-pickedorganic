@@ -1,9 +1,9 @@
 ---
 templateKey: index-page
-title: Great veg with a conscience
+title: Picked Organic
 image: /img/home-jumbotron.jpg
 heading: Great veg with a conscience
-subheading: Support sustainable farming
+subheading: Community Supported Agriculture
 mainpitch:
   title: Why Picked Organic
   description: >
