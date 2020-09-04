@@ -3,7 +3,7 @@ templateKey: index-page
 title: Picked Organic
 image: /img/home-jumbotron.jpg
 heading: Great veg with a conscience
-subheading: Community Supported Agriculture
+subheading: "Pick your veg box below:"
 mainpitch:
   title: Why Picked Organic
   description: >
@@ -12,10 +12,6 @@ mainpitch:
     directly from small scale sustainable farmers and make sure part of the
     profits are reinvested in their communities.
 description: >-
-  Kaldi is the ultimate spot for coffee lovers who want to learn about their
-  java’s origin and support the farmers that grew it. We take coffee production,
-  roasting and brewing seriously and we’re glad to pass that knowledge to
-  anyone.
 intro:
   blurbs:
     - image: /img/small.png
