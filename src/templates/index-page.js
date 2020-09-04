@@ -23,7 +23,7 @@ export const IndexPageTemplate = ({
           !!image.childImageSharp ? image.childImageSharp.fluid.src : image
         })`,
         backgroundPosition: `center center`,
-        backgroundAttachment: `fixed`,
+        backgroundAttachment: `scroll`,
       }}
     >
       <div
