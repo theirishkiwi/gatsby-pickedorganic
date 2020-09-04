@@ -1,10 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'Picked Organic Market Garden',
+    title: 'Picked; An Organic Market Garden',
     description:
-      'Picked Organic Market Garden, working with nature. Experience a taste sensation by buying vegetables that are picked when ripe and in season',
-    keywords:
-      'buy local, pesticide and chemical free, organic, market garden, vegetables, veg box, plastic free, zero waste, seasonal vegetables, minimise carbon footprint',  
+      'Buy local organic vegetables which are pesticide and chemical free. Experience a taste sensation eating vegetables that are picked when ripe and in season. We work with nature and sustainably and are plastic free, zero waste to our minimise carbon footprint'
   },
   plugins: [
     'gatsby-plugin-react-helmet',
