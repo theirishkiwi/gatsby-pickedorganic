@@ -3,7 +3,7 @@ templateKey: index-page
 title: Picked Organic
 image: /img/home-jumbotron.jpg
 heading: Great veg with a conscience
-subheading: "Pick your veg box below:"
+subheading: Pick your veg box below
 mainpitch:
   title: Why Picked Organic
   description: >
