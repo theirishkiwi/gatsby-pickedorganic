@@ -1,9 +1,9 @@
 ---
 templateKey: 'product-page'
-path: /products/large
-title: Large Veg Box
+path: /veg-boxes
+title: Our Large Veg Box
 image: /img/og-image.jpg
-heading: Buy Our Large Veg Box
+heading: Buy Our Large Vegbox
 description: >-
   Kaldi is the ultimate spot for coffee lovers who want to learn about their
   java’s origin and support the farmers that grew it. We take coffee production,
@@ -74,7 +74,7 @@ pricing:
   heading: Veg Box subscriptions
   description: >-
     We make it easy to make great organic veg part of your life. Choose one of our
-    veg box subscription plans to receive locally grown in season veggies to your doorstep each week. Contact us about more details and payment info.
+    veg box subscription plans to receive locally grown in season veggies to your doorstep each week. Contact us for more details and payment info.
   plans:
     - description: Perfect for the drinker who likes to enjoy 1-2 cups per day.
       items:
