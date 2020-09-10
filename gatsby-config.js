@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Picked; An Organic Market Garden',
+    title: 'Picked - An Organic Market Garden in Northern Ireland',
     description:
       'Buy local organic vegetables which are pesticide and chemical free. Vegetables that are picked when ripe and in season. We work with nature and sustainably and are plastic free, zero waste to our minimise carbon footprint',
   },

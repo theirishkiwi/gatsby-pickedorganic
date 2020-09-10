@@ -83,18 +83,18 @@ pricing:
         - One or two varieties of beans"
       plan: Small
       price: '10'
-    - description: 'Great for avid drinkers, java-loving couples and bigger crowds'
+    - description: 'Great for avid veg eaters, veg-loving couples and bigger crowds'
       items:
         - 6 lbs of coffee per month
         - Green or roasted beans
         - Up to 4 different varieties of beans
       plan: Large
       price: '15'
-    - description: Want a few tiny batches from different varieties? Try our custom plan
-      items:
-        - Whatever you need
-        - Green or roasted beans
-        - Unlimited varieties
-      plan: Custom
-      price: '??'
+    #- description: Want a few tiny batches from different varieties? Try our custom plan
+    #  items:
+    #    - Whatever you need
+    #    - Green or roasted beans
+    #    - Unlimited varieties
+    #  plan: Custom
+    #  price: '??'
 ---
