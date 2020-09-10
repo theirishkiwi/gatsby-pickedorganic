@@ -90,7 +90,7 @@ pricing:
         - Up to 4 different varieties of beans
       plan: Large
       price: '15'
-    - description: Want a few tiny batches from different varieties? Try our custom plan
+   #- description: Want a few tiny batches from different varieties? Try our custom plan
    #   items:
    #   - Whatever you need
    #   - Green or roasted beans
