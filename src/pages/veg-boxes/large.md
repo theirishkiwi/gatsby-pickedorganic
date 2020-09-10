@@ -92,9 +92,9 @@ pricing:
       price: '15'
     - description: Want a few tiny batches from different varieties? Try our custom plan
    #   items:
-     #   - Whatever you need
-     #   - Green or roasted beans
-     #   - Unlimited varieties
-     # plan: Custom
-     # price: '??'
+   #   - Whatever you need
+   #   - Green or roasted beans
+   #   - Unlimited varieties
+   # plan: Custom
+   # price: '??'
 ---
