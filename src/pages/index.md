@@ -5,7 +5,7 @@ image: /img/home-jumbotron.jpg
 heading: Buy Your Veg Boxes Below!
 subheading: Pick your veg box below
 mainpitch:
-  title: Picked Organic - Get Great Veg, ripe and in season
+  title: Picked Organic - Great Veg, ripe and in season!
   description: >
     Picked is a Market Garden... can add a blurb here if you wanted or just remove?
 description: >-
