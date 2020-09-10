@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Features from '../components/Features'
 import Testimonials from '../components/Testimonials'
@@ -8,6 +8,7 @@ import Pricing from '../components/Pricing'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 export const ProductPageTemplate = ({
+  link,
   image,
   title,
   heading,
@@ -111,6 +112,7 @@ ProductPageTemplate.propTypes = {
   description: PropTypes.string,
   intro: PropTypes.shape({
     blurbs: PropTypes.array,
+      link: PropTypes.string,
   }),
   main: PropTypes.shape({
     heading: PropTypes.string,
@@ -134,6 +136,7 @@ const ProductPage = ({ data }) => {
   return (
     <Layout>
       <ProductPageTemplate
+        link={frontmatter.link}
         image={frontmatter.image}
         title={frontmatter.title}
         heading={frontmatter.heading}
@@ -174,6 +177,7 @@ export const productPageQuery = graphql`
         description
         intro {
           blurbs {
+            link
             image {
               childImageSharp {
                 fluid(maxWidth: 240, quality: 64) {
