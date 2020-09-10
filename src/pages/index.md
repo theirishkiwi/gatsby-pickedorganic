@@ -2,7 +2,7 @@
 templateKey: index-page
 title: Picked Organic
 image: /img/home-jumbotron.jpg
-heading: Buy Your Veg Boxes Below!
+heading: Choose Your Veg Box Below!
 subheading: Pick your veg box below
 mainpitch:
   title: Picked Organic - Great Veg, ripe and in season!
