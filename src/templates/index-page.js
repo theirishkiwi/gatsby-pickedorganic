@@ -7,6 +7,7 @@ import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
 
 export const IndexPageTemplate = ({
+  link,
   image,
   title,
   heading,
@@ -94,17 +95,7 @@ export const IndexPageTemplate = ({
                     </Link>
                   </div>
                 </div>
-                <div className="column is-12">
-                  <h3 className="has-text-weight-semibold is-size-2">
-                    Latest stories
-                  </h3>
-                  <BlogRoll />
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/blog">
-                      Read more
-                    </Link>
-                  </div>
-                </div>
+
               </div>
             </div>
           </div>
@@ -113,6 +104,22 @@ export const IndexPageTemplate = ({
     </section>
   </div>
 )
+
+/**
+ *  Moved from space two </div>'s below </Link>
+ * 
+ *              <div className="column is-12">
+                  <h3 className="has-text-weight-semibold is-size-2">
+                    Latest stories
+                  </h3>
+                  <BlogRoll />
+                  <div className="column is-12 has-text-centered">
+                    <Link className="btn" to="/blog">
+                      Read more
+                  </Link>
+                  </div>
+                </div>
+ */
 
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
@@ -123,6 +130,7 @@ IndexPageTemplate.propTypes = {
   description: PropTypes.string,
   intro: PropTypes.shape({
     blurbs: PropTypes.array,
+      link: PropTypes.string,
   }),
 }
 
@@ -133,6 +141,7 @@ const IndexPage = ({ data }) => {
     <Layout>
       <IndexPageTemplate
         image={frontmatter.image}
+        link={frontmatter.link}
         title={frontmatter.title}
         heading={frontmatter.heading}
         subheading={frontmatter.subheading}
@@ -175,6 +184,7 @@ export const pageQuery = graphql`
         description
         intro {
           blurbs {
+            link
             image {
               childImageSharp {
                 fluid(maxWidth: 240, quality: 64) {

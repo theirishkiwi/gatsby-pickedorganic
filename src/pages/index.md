@@ -2,15 +2,12 @@
 templateKey: index-page
 title: Picked Organic
 image: /img/home-jumbotron.jpg
-heading: Great veg with a conscience
+heading: Buy Your Veg Boxes Below!
 subheading: Pick your veg box below
 mainpitch:
-  title: Why Picked Organic
+  title: Picked Organic - Get Great Veg, ripe and in season
   description: >
-    Picked is the coffee store for everyone who believes that great coffee
-    shouldn't just taste good, it should do good too. We source all of our beans
-    directly from small scale sustainable farmers and make sure part of the
-    profits are reinvested in their communities.
+    Picked is a Market Garden... can add a blurb here if you wanted or just remove?
 description: >-
 intro:
   blurbs:
@@ -29,8 +26,8 @@ intro:
       #  tools for every taste and experience level. No matter if you roast your
       #  own beans or just bought your first french press, you’ll find a gadget
       #  to fall in love with in our shop.
-    - image: /img/xllarge.png
-      link: /veg-boxes/large
+    #- image: /img/xllarge.png
+      #link: /veg-boxes/xllarge
       #text: >
       #  Love a great cup of coffee, but never knew how to make one? Bought a
       # fancy new Chemex but have no clue how to use it? Don't worry, we’re here

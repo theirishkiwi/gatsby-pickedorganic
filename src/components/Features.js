@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link, graphql } from 'gatsby'
+import { Link } from 'gatsby'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 const FeatureGrid = ({ gridItems }) => (
@@ -15,7 +15,7 @@ const FeatureGrid = ({ gridItems }) => (
                 display: 'inline-block',
               }}
             >
-              <Link to="/veg-boxes/large">
+              <Link to={item.link}>
                 <PreviewCompatibleImage imageInfo={item} />
               </Link>
             </div>

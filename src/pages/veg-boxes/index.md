@@ -1,6 +1,6 @@
 ---
 templateKey: 'product-page'
-path: /products
+path: /veg-boxes
 title: Our Veg Boxes
 image: /img/jumbotron.jpg
 heading: Great veg with a conscience

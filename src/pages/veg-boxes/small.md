@@ -12,6 +12,7 @@ description: >-
 intro:
   blurbs:
     - image: /img/small.png
+      link: /veg-boxes/small
       text: >
         We sell green and roasted coffee beans that are sourced directly from
         independent farmers and farm cooperatives. We’re proud to offer a
