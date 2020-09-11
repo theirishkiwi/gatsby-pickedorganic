@@ -6,6 +6,7 @@ import Features from '../components/Features'
 import Testimonials from '../components/Testimonials'
 import Pricing from '../components/Pricing'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+import ContactForm from '../components/ContactForm'
 
 export const VegboxPageTemplate = ({
   image,
@@ -96,6 +97,7 @@ export const VegboxPageTemplate = ({
               </h2>
               <p className="is-size-5">{pricing.description}</p>
               <Pricing data={pricing.plans} />
+              <ContactForm />
             </div>
           </div>
         </div>
