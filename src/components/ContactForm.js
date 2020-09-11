@@ -92,7 +92,6 @@ export default class Index extends React.Component {
                         <select 
                           className="input"
                           name={'size'}
-                          aria-label="size required" 
                           required
                         >
                           <option 
@@ -103,12 +102,12 @@ export default class Index extends React.Component {
                           </option>
                           <option 
                             name="smallbox" 
-                            value="Small Veg Box - £10">
+                            value="Small - £10">
                               Small - £10
                           </option>
                           <option 
                             name="largebox" 
-                            value="Large Veg Box - £15"
+                            value="Large - £15"
                             >
                               Large - £15
                           </option>
@@ -124,7 +123,6 @@ export default class Index extends React.Component {
                         <select 
                           className="input"
                           name={'transport'}
-                          aria-label="transport" 
                           required
                         >
                           <option 
