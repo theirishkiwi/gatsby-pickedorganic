@@ -1,3 +1,4 @@
+// @flow,
 import React from 'react'
 import { navigate } from 'gatsby-link'
 
@@ -92,6 +93,8 @@ export default class Index extends React.Component {
                         <select 
                           className="input"
                           name={'size'}
+                          onChange={this.handleChange}
+                          id={'size'}
                           required
                         >
                           <option 
