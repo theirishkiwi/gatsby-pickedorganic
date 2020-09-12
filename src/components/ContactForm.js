@@ -126,6 +126,8 @@ export default class Index extends React.Component {
                         <select 
                           className="input"
                           name={'transport'}
+                          onChange={this.handleChange}
+                          id={'transport'}
                           required
                         >
                           <option 
