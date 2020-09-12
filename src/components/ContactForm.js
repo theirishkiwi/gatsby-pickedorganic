@@ -57,7 +57,7 @@ export default class Index extends React.Component {
                 </div>
                 <div className="field">
                   <label className="label" htmlFor={'name'}>
-                    Your name
+                    Your name *
                   </label>
                   <div className="control">
                     <input
@@ -72,7 +72,7 @@ export default class Index extends React.Component {
                 </div>
                 <div className="field">
                   <label className="label" htmlFor={'email'}>
-                    Email
+                    Email *
                   </label>
                   <div className="control">
                     <input
@@ -88,7 +88,7 @@ export default class Index extends React.Component {
 
                 <div className="field">
                   <label className="label" htmlFor={'tel'}>
-                    Contact Number
+                    Contact Number *
                   </label>
                   <div className="control">
                     <input
@@ -105,7 +105,7 @@ export default class Index extends React.Component {
 
                    <div className="field">
                       <label className="label" htmlFor={'size'}>
-                         Veg Box Size
+                         Veg Box Size *
                       </label>
                       <div className="control">
                         <select 
@@ -138,7 +138,7 @@ export default class Index extends React.Component {
 
                   <div className="field">
                       <label className="label" htmlFor={'transport'}>
-                          Delivered or Collection
+                          Delivered or Collection *
                       </label>
                       <div className="control">
                         <select 
@@ -146,7 +146,6 @@ export default class Index extends React.Component {
                           name={'transport'}
                           onChange={this.handleChange}
                           id={'transport'}
-                          required
                         >
                           <option 
                             value="" 
@@ -179,7 +178,7 @@ export default class Index extends React.Component {
                       name={'message'}
                       onChange={this.handleChange}
                       id={'message'}
-                      required={true}
+                      required={false}
                     />
                   </div>
                 </div>
