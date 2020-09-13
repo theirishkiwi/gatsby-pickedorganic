@@ -7,14 +7,11 @@ published: true
 ### Community supported agriculture
 Community supported agriculture (CSA) is a partnership between farmers and consumers in which the responsibilities, risks and rewards of farming are shared.
 
-### Single origin
-Single-origin coffee is coffee grown within a single known geographic origin. Sometimes, this is a single farm or a specific collection of beans from a single country. The name of the coffee is then usually the place it was grown to whatever degree available.
+### About
 
-### Sustainable farming
-Sustainable agriculture is farming in sustainable ways based on an understanding of ecosystem services, the study of relationships between organisms and their environment. What grows where and how it is grown are a matter of choice and careful consideration for nature and communities.
+We are a market garden just outside moneyreagh Belfast. We grow a range of seasonal produce using Agro-ecological methods, this means we don’t use pesticides or synthetic fertilizers, we prefer to work with nature to foster a healthy soil that rewards us with beautiful plants that not only benefit our health but the planets as well.
+A vegetable that arrives on your plate within a couple of hours of being picked is simply hard to beat. It’s tastes, well, like vegetables were meant to taste like. This is why we are passionate about growing real food that’s local and in season. 
 
-### Direct sourcing
-Direct trade is a form of sourcing practiced by some coffee roasters. Advocates of direct trade practices promote direct communication and price negotiation between buyer and farmer, along with systems that encourage and incentivize quality.
+Unfortunately we live in a world were allot of our food is now imported from a country hundreds of miles away. We believe there is another way. 
 
-### Reinvest profits
-We want to truly empower the communities that bring amazing coffee to you. That’s why we reinvest 20% of our profits into farms, local businesses and schools everywhere our coffee is grown. You can see the communities grow and learn more about coffee farming on our blog.
+If you would like to join our veg club and support the local food movement then follow the link below. 
