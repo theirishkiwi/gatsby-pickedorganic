@@ -60,6 +60,7 @@ const ConditionalForm = () => (
                     data-netlify-honeypot="bot-field"
                     onSubmit={handleSubmit}
                     >
+
                     <div className="field">
                         <label className="label">Your Name</label>
                         <Field
@@ -169,7 +170,7 @@ const ConditionalForm = () => (
                       </div>
                     
                     <div className="buttons">
-                        <button className="button is-link" type="submit" disabled={submitting}>
+                        <button className="button is-link" type="submit">
                         Subscribe
                         </button>
                         <button className="button is-link" type="button" onClick={form.reset} disabled={submitting}>
