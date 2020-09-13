@@ -1,5 +1,4 @@
 import React from 'react'
-import { render } from 'react-dom'
 import { Form, Field } from 'react-final-form'
 
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
@@ -36,14 +35,20 @@ const ConditionalForm = () => (
                     if (!values.Name) {
                     errors.Name = 'Required'
                     }
-                    if (!values.reception) {
-                    errors.reception = 'Required'
+                    if (!values.email) {
+                    errors.email = 'Required'
                     }
-                    if (values.reception === 'delivery') {
+                    if (!values.tel) {
+                        errors.tel = 'Required'
+                    }
+                    if (!values.size) {
+                        errors.size = 'Required'
+                    }
+                    if (values.transport === 'delivery') {
                     if (!values.address) {
                         errors.address = 'Required'
                     }
-                    } else if (values.reception === 'pickup') {
+                    } else if (values.transport === 'collection') {
                     if (!values.pickupTime) {
                         errors.pickupTime = 'Required'
                     }
@@ -60,9 +65,13 @@ const ConditionalForm = () => (
                     data-netlify-honeypot="bot-field"
                     onSubmit={handleSubmit}
                     >
-
+                    {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
+                    <input type="hidden" name="form-name" value="contact" />
+                    <div hidden>
+                    <label>Don’t fill out:{' '}<input name="bot-field" /></label>
+                    </div>
                     <div className="field">
-                        <label className="label">Your Name</label>
+                        <label className="label" htmlFor="Name">Your Name</label>
                         <Field
                         className="input"
                         name="Name"
@@ -74,7 +83,7 @@ const ConditionalForm = () => (
                     </div>
 
                     <div className="field">
-                        <label className="label">Email</label>
+                        <label className="label" htmlFor="email">Email</label>
                         <Field
                         className="input"
                         name="email"
@@ -86,7 +95,7 @@ const ConditionalForm = () => (
                     </div>
 
                     <div className="field">
-                        <label className="label">Contact Number</label>
+                        <label className="label" htmlFor="tel">Contact Number</label>
                         <Field
                         className="input"
                         name="tel"
@@ -97,9 +106,9 @@ const ConditionalForm = () => (
                         <Error name="tel" />
                     </div>
                     <div className="field">
-                        <label className="label">Box Size</label>
+                        <label className="label" htmlFor="size">Box Size</label>
                         <div className="control">
-                        <label className="label">
+                        <label className="label" htmlFor="size">
                         <Field className="input" name="size" component="select">
                             <option value="" disabled>- select size -</option>
                             <option value="Small">Small - £10</option>
@@ -110,7 +119,7 @@ const ConditionalForm = () => (
                     </div>
                     <div class="field">
                         <div class="control">
-                        <label className="label">Transport</label>
+                        <label className="label" htmlFor="transport">Transport</label>
                         <div className="control">
                         <label class="radio">
                           <Field
@@ -137,7 +146,7 @@ const ConditionalForm = () => (
                     <Condition when="transport" is="delivery">
                       <div className="field">
                         <div class="control">
-                        <label className="label">
+                        <label className="label" htmlFor="address">
                             Delivery Address
                         </label>
                         <sub>(£1.50 charge)</sub>
@@ -155,7 +164,7 @@ const ConditionalForm = () => (
 
                     <div className="field">
                         <div class="control">
-                        <label className="label">
+                        <label className="label" htmlFor="comment">
                             Comment/Request
                         </label>
                         <Field
