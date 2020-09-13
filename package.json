@@ -1,10 +1,11 @@
 {
   "name": "gatsby-starter-netlify-cms",
-  "description": "Example Gatsby, and Netlify CMS project",
+  "description": "Gatsby, and Netlify CMS project",
   "version": "1.1.3",
   "author": "Austin Green",
   "dependencies": {
     "bulma": "^0.9.0",
+    "final-form": "^4.20.1",
     "gatsby": "^2.20.35",
     "gatsby-image": "^2.3.5",
     "gatsby-plugin-netlify": "^2.2.4",
@@ -12,7 +13,7 @@
     "gatsby-plugin-purgecss": "^5.0.0",
     "gatsby-plugin-react-helmet": "^3.2.5",
     "gatsby-plugin-sass": "^2.2.4",
-    "gatsby-plugin-sharp": "^2.5.7",
+    "gatsby-plugin-sharp": "2.6.26",
     "gatsby-remark-copy-linked-files": "^2.2.4",
     "gatsby-remark-images": "^3.2.6",
     "gatsby-remark-relative-images": "^0.3.0",
@@ -28,6 +29,7 @@
     "prop-types": "^15.6.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
+    "react-final-form": "^6.5.1",
     "react-helmet": "^6.0.0",
     "uuid": "^7.0.0"
   },
@@ -45,6 +47,16 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "flow-bin": "^0.133.0",
+    "flow-remove-types": "^2.133.0",
     "prettier": "^2.0.5"
+  },
+  "flowRemoveTypes": {
+    "name": "my-project",
+    "main": "lib/index.js",
+    "scripts": {
+      "build": "flow-remove-types src/ -d lib/",
+      "prepublish": "npm run build"
+    }
   }
 }
