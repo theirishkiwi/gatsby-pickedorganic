@@ -3,56 +3,28 @@ templateKey: 'product-page'
 path: /veg-boxes
 title: Our Veg Boxes
 image: /img/jumbotron.jpg
-heading: Great veg with a conscience
+heading: Sustainably growing real food with a Conscience (for the local community) 
 description: >-
-  Kaldi is the ultimate spot for coffee lovers who want to learn about their
-  java’s origin and support the farmers that grew it. We take coffee production,
-  roasting and brewing seriously and we’re glad to pass that knowledge to
-  anyone.
+  Our boxes contains between 7 and 10 items depending on size that will vary throughout the season.
 intro:
   blurbs:
     - image: /img/small.png
       link: /veg-boxes/small
       text: >
-        We sell green and roasted coffee beans that are sourced directly from
-        independent farmers and farm cooperatives. We’re proud to offer a
-        variety of coffee beans grown with great care for the environment and
-        local communities. Check our post or contact us directly for current
-        availability.
+        A small box contains about 7 items that will vary throughout the season
+        Good for  2 people or one person who really loves their veg!
     - image: /img/large.png
       link: /veg-boxes/large
       text: >
-        We offer a small, but carefully curated selection of brewing gear and
-        tools for every taste and experience level. No matter if you roast your
-        own beans or just bought your first french press, you’ll find a gadget
-        to fall in love with in our shop.
-    #- image: /img/xllarge.png
-    #  text: >
-    #    Love a great cup of coffee, but never knew how to make one? Bought a
-    #    fancy new Chemex but have no clue how to use it? Don't worry, we’re here
-    #    to help. You can schedule a custom 1-on-1 consultation with our baristas
-    #    to learn anything you want to know about coffee roasting and brewing.
-    #    Email us or call the store for details.
-    #- image: /img/meeting-space.png
-    #  text: >
-    #    We believe that good coffee has the power to bring people together.
-    #    That’s why we decided to turn a corner of our shop into a cozy meeting
-    #    space where you can hang out with fellow coffee lovers and learn about
-    #    coffee making techniques. All of the artwork on display there is for
-    #    sale. The full price you pay goes to the artist.
+        A large box contains about 10 items including potatoes, good for a small family or a couple who really lover their veg!
   heading: What we offer
   description: >
-    Kaldi is the ultimate spot for coffee lovers who want to learn about their
-    java’s origin and support the farmers that grew it. We take coffee
-    production, roasting and brewing seriously and we’re glad to pass that
-    knowledge to anyone. This is an edit via identity...
+   An example box might contain - vibrant salad mix, spring onions, carrots, courgettes, tomatoes, kale mix, Aubergine and fresh herb mix. Plus a wee wild flower posy.
 main:
-  heading: Great coffee with no compromises
+  heading: When do you deliver/ collect?
   description: >
-    We hold our coffee to the highest standards from the shrub to the cup.
-    That’s why we’re meticulous and transparent about each step of the coffee’s
-    journey. We personally visit each farm to make sure the conditions are
-    optimal for the plants, farmers and the local environment.
+   Wednesday afternoon? Ask rostering ?
+   As we have other commitments outside of the farm, we will have to keep our delivery/collection days flexible. We will let you know 2 weeks in advance what day we will deliver. If this doesn’t suit, just let us know and we will endeavor to find a Day that works best for you.
   image1:
     alt: A close-up of a paper filter filled with ground coffee
     image: /img/products-grid3.jpg
@@ -75,8 +47,12 @@ full_image: /img/products-full-width.jpg
 pricing:
   heading: Veg Box subscriptions
   description: >-
-    We make it easy to make great organic veg part of your life. Choose one of our
-    veg box subscription plans to receive locally grown in season veggies to your doorstep each week. Contact us for more details and payment info.
+   We are a market garden just outside moneyreagh Belfast. We grow a range of seasonal produce using Agro-ecological methods, this means we don’t use pesticides or synthetic fertilizers, we prefer to work with nature to foster a healthy soil that rewards us with beautiful plants that not only benefit our health but the planets as well.
+   A vegetable that arrives on your plate within a couple of hours of being picked is simply hard to beat. It’s tastes, well, like vegetables were meant to taste like. This is why we are passionate about growing real food that’s local and in season. 
+
+   Unfortunately we live in a world were allot of our food is now imported from a country hundreds of miles away. We believe there is another way. 
+
+   If you would like to join our veg club and support the local food movement then follow the link below.
   plans:
     - description: Perfect for the drinker who likes to enjoy 1-2 cups per day.
       items:
@@ -92,11 +68,4 @@ pricing:
         - Up to 4 different varieties of beans
       plan: Large
       price: '15'
-    #- description: Want a few tiny batches from different varieties? Try our custom plan
-    #  items:
-    #    - Whatever you need
-    #    - Green or roasted beans
-    #    - Unlimited varieties
-    #  plan: Custom
-    #  price: '??'
 ---

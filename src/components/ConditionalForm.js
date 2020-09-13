@@ -55,7 +55,7 @@ const ConditionalForm = () => (
                     <form
                     name="subscription"
                     method="post"
-                    action="/contact/thanks/"
+                    action="/components/thanks/"
                     data-netlify="true"
                     data-netlify-honeypot="bot-field"
                     onSubmit={handleSubmit}
@@ -139,6 +139,7 @@ const ConditionalForm = () => (
                         <label className="label">
                             Delivery Address
                         </label>
+                        <sub>(£1.50 charge)</sub>
                         <Field
                             className="textarea"
                             name="address"
