@@ -32,8 +32,8 @@ const ConditionalForm = () => (
                 onSubmit={onSubmit}
                 validate={values => {
                     const errors = {}
-                    if (!values.Name) {
-                    errors.Name = 'Required'
+                    if (!values.yourName) {
+                    errors.yourName = 'Required'
                     }
                     if (!values.email) {
                     errors.email = 'Required'
@@ -47,6 +47,9 @@ const ConditionalForm = () => (
                     if (values.transport === 'delivery') {
                     if (!values.address) {
                         errors.address = 'Required'
+                    }
+                    if (!values.requests) {
+                        errors.requests = 'Required'
                     }
                     } else if (values.transport === 'collection') {
                     if (!values.pickupTime) {
@@ -71,10 +74,10 @@ const ConditionalForm = () => (
                     <label>Don’t fill out:{' '}<input name="bot-field" /></label>
                     </div>
                     <div className="field">
-                        <label className="label" htmlFor="Name">Your Name</label>
+                        <label className="label" htmlFor="yourName">Your Name</label>
                         <Field
+                        name="yourName"
                         className="input"
-                        name="Name"
                         component="input"
                         type="text"
                         placeholder="your name"
@@ -85,8 +88,8 @@ const ConditionalForm = () => (
                     <div className="field">
                         <label className="label" htmlFor="email">Email</label>
                         <Field
-                        className="input"
                         name="email"
+                        className="input"
                         component="input"
                         type="email"
                         placeholder="email"
@@ -97,8 +100,8 @@ const ConditionalForm = () => (
                     <div className="field">
                         <label className="label" htmlFor="tel">Contact Number</label>
                         <Field
-                        className="input"
                         name="tel"
+                        className="input"
                         component="input"
                         type="tel"
                         placeholder="contact number"
@@ -151,8 +154,8 @@ const ConditionalForm = () => (
                         </label>
                         <sub>(£1.50 charge)</sub>
                         <Field
-                            className="textarea"
                             name="address"
+                            className="textarea"
                             component="textarea"
                             type="textarea"
                             placeholder="delivery address"
@@ -164,17 +167,17 @@ const ConditionalForm = () => (
 
                     <div className="field">
                         <div class="control">
-                        <label className="label" htmlFor="comment">
-                            Comment/Request
+                        <label className="label" htmlFor="requests">
+                            Comment/Requests
                         </label>
                         <Field
                             className="textarea"
-                            name="comment"
+                            name="requests"
                             component="textarea"
                             type="textarea"
-                            placeholder="comment/request"
+                            placeholder="comment/requests"
                         />
-                        <Error name="comment" />
+                        <Error name="requests" />
                         </div>
                       </div>
                     
