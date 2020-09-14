@@ -124,7 +124,7 @@ const ConditionalForm = () => (
                         <div class="control">
                         <label className="label" htmlFor="transport">Transport</label>
                         <div className="control">
-                        <label class="radio">
+                        <label class="radio" htmlFor="delivery">
                           <Field
                             name="transport"
                             component="input"
@@ -133,12 +133,12 @@ const ConditionalForm = () => (
                           />{' '}
                             Delivery
                         </label>
-                        <label class="radio">
+                        <label class="radio" htmlFor="collection">
                           <Field
                             name="transport"
                             component="input"
                             type="radio"
-                            value="collect"
+                            value="collection"
                           />{' '}
                             Collection
                         </label>
@@ -182,7 +182,7 @@ const ConditionalForm = () => (
                       </div>
                     
                     <div className="buttons">
-                        <button className="button is-link" type="submit">
+                        <button className="button is-link" type="submit" onClick={form.onSubmit}>
                         Subscribe
                         </button>
                         <button className="button is-link" type="button" onClick={form.reset} disabled={submitting}>
