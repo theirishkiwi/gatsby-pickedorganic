@@ -58,22 +58,21 @@ const ConditionalForm1 = () => (
                     return errors
                 }}
                 >
-                {({ handleSubmit, form, submitting, pristine, values }) => (
+                {({ handleSubmit, form, submitting, pristine }) => (
                     <form
                     name="subscription"
                     method="post"
-                    action="/components/thanks/"
                     data-netlify="true"
                     data-netlify-honeypot="bot-field"
                     onSubmit={handleSubmit}
                     >
                     {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-                    <input type="hidden" name="form-name" value="contact" />
+                    <input type="hidden" name="form-name" value="subscription" />
                     <div hidden>
                     <label>Don’t fill out:{' '}<input name="bot-field" /></label>
                     </div>
                     <div className="field">
-                        <label className="label" htmlFor="yourName">Your Name</label>
+                        <label className="label" for="yourName">Your Name</label>
                         <Field
                         name="yourName"
                         className="input"
@@ -85,7 +84,7 @@ const ConditionalForm1 = () => (
                     </div>
 
                     <div className="field">
-                        <label className="label" htmlFor="email">Email</label>
+                        <label className="label" for="email">Email</label>
                         <Field
                         name="email"
                         className="input"
@@ -97,7 +96,7 @@ const ConditionalForm1 = () => (
                     </div>
 
                     <div className="field">
-                        <label className="label" htmlFor="phone">Contact Number</label>
+                        <label className="label" for="phone">Contact Number</label>
                         <Field
                         name="phone"
                         className="input"
@@ -110,7 +109,7 @@ const ConditionalForm1 = () => (
                     <div className="field">
                         <label className="label">Box Size</label>
                         <div className="control">
-                        <label className="label" htmlFor="size">
+                        <label className="label" for="size">
                         <Field className="input" name="size" component="select">
                             <option value="" disabled>- select size -</option>
                             <option value="Small">Small - £10</option>
@@ -121,7 +120,7 @@ const ConditionalForm1 = () => (
                     </div>
                     <div class="field">
                         <div class="control">
-                        <label className="label" htmlFor="transport">Transport</label>
+                        <label className="label" for="transport">Transport</label>
                         <div className="control">
                         <label class="radio">
                           <Field
@@ -148,7 +147,7 @@ const ConditionalForm1 = () => (
                     <Condition when="transport" is="delivery">
                       <div className="field">
                         <div class="control">
-                        <label className="label" htmlFor="address">
+                        <label className="label" for="address">
                             Delivery Address
                         </label>
                         <sub>(£1.50 charge)</sub>
@@ -166,7 +165,7 @@ const ConditionalForm1 = () => (
 
                     <div className="field">
                         <div class="control">
-                        <label className="label" htmlFor="requests">
+                        <label className="label" for="requests">
                             Comment/Requests
                         </label>
                         <Field
