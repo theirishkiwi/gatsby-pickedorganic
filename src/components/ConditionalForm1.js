@@ -38,8 +38,8 @@ const ConditionalForm1 = () => (
                     if (!values.email) {
                     errors.email = 'Required'
                     }
-                    if (!values.tel) {
-                        errors.tel = 'Required'
+                    if (!values.phone) {
+                        errors.phone = 'Required'
                     }
                     if (!values.size) {
                         errors.size = 'Required'
@@ -48,13 +48,15 @@ const ConditionalForm1 = () => (
                     if (!values.address) {
                         errors.address = 'Required'
                     }
+                   }
+                    if (!values.transport) {
+                        errors.transport = 'Required'
+                    }
                     if (!values.requests) {
                         errors.requests = 'Required'
                     }
-                    } else if (values.transport === 'collection') {
-                    if (!values.pickupTime) {
+                    if (values.transport === 'collection') {
                         errors.pickupTime = 'Required'
-                    }
                     }
                     return errors
                 }}
@@ -82,7 +84,7 @@ const ConditionalForm1 = () => (
                         type="text"
                         placeholder="your name"
                         />
-                        <Error name="Name" />
+                        <Error name="yourName" />
                     </div>
 
                     <div className="field">
@@ -98,18 +100,18 @@ const ConditionalForm1 = () => (
                     </div>
 
                     <div className="field">
-                        <label className="label" htmlFor="tel">Contact Number</label>
+                        <label className="label" htmlFor="phone">Contact Number</label>
                         <Field
-                        name="tel"
+                        name="phone"
                         className="input"
                         component="input"
                         type="tel"
                         placeholder="contact number"
                         />
-                        <Error name="tel" />
+                        <Error name="phone" />
                     </div>
                     <div className="field">
-                        <label className="label" htmlFor="size">Box Size</label>
+                        <label className="label">Box Size</label>
                         <div className="control">
                         <label className="label" htmlFor="size">
                         <Field className="input" name="size" component="select">
