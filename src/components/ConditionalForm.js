@@ -51,10 +51,6 @@ const ConditionalForm = () => (
                     if (!values.requests) {
                         errors.requests = 'Required'
                     }
-                    } else if (values.transport === 'collection') {
-                    if (!values.pickupTime) {
-                        errors.pickupTime = 'Required'
-                    }
                     }
                     return errors
                 }}
@@ -124,7 +120,7 @@ const ConditionalForm = () => (
                         <div class="control">
                         <label className="label" htmlFor="transport">Transport</label>
                         <div className="control">
-                        <label class="radio" htmlFor="delivery">
+                        <label class="radio">
                           <Field
                             name="transport"
                             component="input"
@@ -133,7 +129,7 @@ const ConditionalForm = () => (
                           />{' '}
                             Delivery
                         </label>
-                        <label class="radio" htmlFor="collection">
+                        <label class="radio">
                           <Field
                             name="transport"
                             component="input"
