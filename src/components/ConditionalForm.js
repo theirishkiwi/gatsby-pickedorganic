@@ -67,7 +67,7 @@ const ConditionalForm = () => (
                     <label>Don’t fill out:{' '}<input name="bot-field" /></label>
                     </div>
                     <div className="field">
-                        <label className="label" htmlFor="yourName">Your Name</label>
+                        <label className="label">Your Name</label>
                         <Field
                         name="yourName"
                         className="input"
@@ -79,7 +79,7 @@ const ConditionalForm = () => (
                     </div>
 
                     <div className="field">
-                        <label className="label" htmlFor="email">Email</label>
+                        <label className="label">Email</label>
                         <Field
                         name="email"
                         className="input"
@@ -91,7 +91,7 @@ const ConditionalForm = () => (
                     </div>
 
                     <div className="field">
-                        <label className="label" htmlFor="phone">Contact Number</label>
+                        <label className="label">Contact Number</label>
                         <Field
                         name="phone"
                         className="input"
@@ -118,7 +118,7 @@ const ConditionalForm = () => (
                     </div>
                     <div class="field">
                         <div class="control">
-                        <label className="label" htmlFor="transport">Transport</label>
+                        <label className="label">Transport</label>
                         <div className="control">
                         <label class="radio">
                           <Field
@@ -145,7 +145,7 @@ const ConditionalForm = () => (
                     <Condition when="transport" is="delivery">
                       <div className="field">
                         <div class="control">
-                        <label className="label" htmlFor="address">
+                        <label className="label">
                             Delivery Address
                         </label>
                         <sub>(£1.50 charge)</sub>
@@ -163,7 +163,7 @@ const ConditionalForm = () => (
 
                     <div className="field">
                         <div class="control">
-                        <label className="label" htmlFor="requests">
+                        <label className="label">
                             Comment/Requests
                         </label>
                         <Field
