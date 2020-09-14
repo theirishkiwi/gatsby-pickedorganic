@@ -6,7 +6,7 @@ import Features from '../components/Features'
 import Testimonials from '../components/Testimonials'
 import Pricing from '../components/Pricing'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
-import SubscribersForm from '../components/SubscribersForm'
+import ConditionalForm from '../components/ConditionalForm1'
 
 export const ProductPageTemplate = ({
   link,
@@ -98,7 +98,7 @@ export const ProductPageTemplate = ({
               </h2>
               <p className="is-size-5">{pricing.description}</p>
               <Pricing data={pricing.plans} />
-              <SubscribersForm />
+              <ConditionalForm />
             </div>
           </div>
         </div>
