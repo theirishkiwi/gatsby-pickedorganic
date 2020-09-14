@@ -109,7 +109,7 @@ const ConditionalForm = () => (
                         <Error name="tel" />
                     </div>
                     <div className="field">
-                        <label className="label" htmlFor="size">Box Size</label>
+                        <label className="label" >Box Size</label>
                         <div className="control">
                         <label className="label" htmlFor="size">
                         <Field className="input" name="size" component="select">

@@ -16,14 +16,14 @@ intro:
     - image: /img/large.png
       link: /veg-boxes/large
       text: >
-        A large box contains about 10 items including potatoes, good for a small family or a couple who really lover their veg!
+        A large box contains about 10 items including potatoes, good for a small family or a couple who really love their veg!
   heading: What we offer
   description: >
    An example box might contain - vibrant salad mix, spring onions, carrots, courgettes, tomatoes, kale mix, Aubergine and fresh herb mix. Plus a wee wild flower posy.
 main:
-  heading: When do you deliver/ collect?
+  heading: How do deliveries and collections work?
   description: >
-   Wednesday afternoon? Ask rostering ?
+   Wednesday afternoons?
    As we have other commitments outside of the farm, we will have to keep our delivery/collection days flexible. We will let you know 2 weeks in advance what day we will deliver. If this doesn’t suit, just let us know and we will endeavor to find a Day that works best for you.
   image1:
     alt: A close-up of a paper filter filled with ground coffee
@@ -54,18 +54,22 @@ pricing:
 
    If you would like to join our veg club and support the local food movement then follow the link below.
   plans:
-    - description: Perfect for the drinker who likes to enjoy 1-2 cups per day.
+    - description: 'A small box contains about 7 items that will vary throughout the season
+        Good for  2 people or one person who really loves their veg!'
       items:
-        - 3 lbs of coffee per month
-        - Green or roasted beans"
-        - One or two varieties of beans"
+        - 7 items of veg that vary with the season
+        - vibrant salad mix, spring onions, carrots, courgettes, tomatoes, kale mix, Aubergine and fresh herb mix. 
+        - A wee wild flower posy
+        - Suitable for 2 people or one person who really loves their veg!
       plan: Small
       price: '10'
-    - description: 'Great for avid veg eaters, veg-loving couples and bigger crowds'
+    - description: 'A large box contains about 10 items including potatoes, good for a small family or a couple who really love their veg!'
       items:
-        - 6 lbs of coffee per month
-        - Green or roasted beans
-        - Up to 4 different varieties of beans
+        - 10 items of veg that vary with the season
+        - Large vibrant salad mix, spring onions, courgettes, carrots, beetroot, kale mix, tomatoes, Aubergine, potatoes, chard and fresh herb mix
+        - Includes potatoes
+        - A wee wild flower posy
+        - Suitable for a small family or a couple who really lover their veg!
       plan: Large
       price: '15'
 ---
