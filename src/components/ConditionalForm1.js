@@ -11,7 +11,7 @@ const onSubmit = async values => {
 const Error = ({ name }) => (
   <Field name={name} subscription={{ error: true, touched: true }}>
     {({ meta: { error, touched } }) =>
-      error && touched ? <span>{error}</span> : null
+      error && touched ? <span style={{color: "#ff4d4d"}}>{error}</span> : null
     }
   </Field>
 )
@@ -51,9 +51,6 @@ const ConditionalForm1 = () => (
                    }
                     if (!values.transport) {
                         errors.transport = 'Required'
-                    }
-                    if (!values.requests) {
-                        errors.requests = 'Required'
                     }
                     if (values.transport === 'collection') {
                         errors.pickupTime = 'Required'
@@ -184,7 +181,7 @@ const ConditionalForm1 = () => (
                       </div>
                     
                     <div className="buttons">
-                        <button className="button is-link" type="submit">
+                        <button className="button is-link" type="submit" disabled={submitting}>
                         Subscribe
                         </button>
                         <button className="button is-link" type="button" onClick={form.reset} disabled={submitting}>
