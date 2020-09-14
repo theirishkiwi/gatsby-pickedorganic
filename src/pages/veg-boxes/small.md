@@ -3,9 +3,28 @@ templateKey: 'vegbox-page'
 path: /veg-boxes
 title: Small Veg Box
 image: /img/og-image.jpg
-heading: Small Vegbox £10 per week
+heading: Small box £10
 description: >-
-  You will receive a small veb box weekly or bi-week depending on the subscription plan you sign up to.
+A small box contains about 7 items that will vary throughout the season
+Good for  2 people or one person who really loves their veg!
+Small box example - vibrant salad mix, spring onions, carrots, courgettes, tomatoes, kale mix, Aubergine and fresh herb mix. Plus a little wild flower posy.
+
+How often -weekly/biweekly
+
+Collection - from farm
+
+Delivery - where do we deliver. Within 6/7 miles?  South & East Belfast, Ballygowan, carryduff, lisburn, dunmurray, finaghy etc
+
+Delivery charge £1.50, small charge just to cover costs. 
+
+Where do you input address?
+
+Payment- Link to go cardless 
+
+When do you deliver/ collect?  Wednesday afternoon? Ask rostering ?
+As we have other commitments outside of the farm, we will have to keep our delivery/collection days  flexible.   We will let you know 2 weeks in advance what day we will deliver. If this doesn’t suit,  just let us know and we will endeavor to find a Day that works best for you. 
+
+Any extras or requests, add comment box below ? 
 intro:
   blurbs:
     - image: /img/small.png
@@ -83,11 +102,4 @@ pricing:
         - Up to 4 different varieties of beans
       plan: Large
       price: '15'
-    #- description: Want a few tiny batches from different varieties? Try our custom plan
-    #  items:
-    #    - Whatever you need
-    #    - Green or roasted beans
-    #    - Unlimited varieties
-    #  plan: Custom
-    #  price: '??'
 ---

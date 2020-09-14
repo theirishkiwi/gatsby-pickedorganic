@@ -44,6 +44,9 @@ const ConditionalForm = () => (
                     if (!values.size) {
                         errors.size = 'Required'
                     }
+                    if (!values.transport) {
+                        errors.transport = 'Required'
+                    }
                     if (values.transport === 'delivery') {
                     if (!values.address) {
                         errors.address = 'Required'
@@ -109,7 +112,7 @@ const ConditionalForm = () => (
                             name="size"
                             className="input" 
                             component="select">
-                            <option value="" disabled>- select size -</option>
+                            <option value="" disabled>** select size **</option>
                             <option value="Small">Small - £10</option>
                             <option value="Large">Large - £15</option>
                         </Field>
@@ -129,12 +132,14 @@ const ConditionalForm = () => (
                           />{' '}
                             Delivery
                         </label>
-                        <label class="radio">
+                        <label class="radio" for="collection">
                           <Field
                             name="transport"
                             component="input"
                             type="radio"
+                            id="collection"
                             value="collection"
+                            defaultChecked
                           />{' '}
                             Collection
                         </label>
