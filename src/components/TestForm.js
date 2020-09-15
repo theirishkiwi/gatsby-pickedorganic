@@ -15,7 +15,7 @@ const TestForm = () => (
         <form 
             name="test"
             onSubmit={handleSubmit}
-            method="post"
+            method="POST"
             action="/contact/thanks/"
             data-netlify="true"
             data-netlify-honeypot="bot-field"
