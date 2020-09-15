@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/accessible-emoji */
 import React from 'react'
 import { Form, Field } from 'react-final-form'
 
@@ -8,190 +9,163 @@ const onSubmit = async values => {
   window.alert(JSON.stringify(values, 0, 2))
 }
 
-const Error = ({ name }) => (
-  <Field name={name} subscription={{ error: true, touched: true }}>
-    {({ meta: { error, touched } }) =>
-      error && touched ? <span>{error}</span> : null
-    }
-  </Field>
-)
-
-const Condition = ({ when, is, children }) => (
-  <Field name={when} subscription={{ value: true }}>
-    {({ input: { value } }) => (value === is ? children : null)}
-  </Field>
-)
-
-
 const ConditionalForm1 = () => (
-    <section className="section">
-        <div className="container">
-            <div className="content">
-              <h2>Join our Veg Club</h2>
-                <Form
-                onSubmit={onSubmit}
-                validate={values => {
-                    const errors = {}
-                    if (!values.Name) {
-                    errors.Name = 'Required'
-                    }
-                    if (!values.email) {
-                    errors.email = 'Required'
-                    }
-                    if (!values.tel) {
-                        errors.tel = 'Required'
-                    }
-                    if (!values.size) {
-                        errors.size = 'Required'
-                    }
-                    if (values.transport === 'delivery') {
-                    if (!values.address) {
-                        errors.address = 'Required'
-                    }
-                    } else if (values.transport === 'collection') {
-                    if (!values.pickupTime) {
-                        errors.pickupTime = 'Required'
-                    }
-                    }
-                    return errors
-                }}
-                >
-                {({ handleSubmit, form, submitting, pristine, values }) => (
-                    <form
-                    name="subscription"
-                    method="post"
-                    action="/components/thanks/"
-                    data-netlify="true"
-                    data-netlify-honeypot="bot-field"
-                    onSubmit={handleSubmit}
-                    >
-                    {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-                    <input type="hidden" name="form-name" value="contact" />
-                    <div hidden>
-                    <label>Don’t fill out:{' '}<input name="bot-field" /></label>
-                    </div>
-                    <div className="field">
-                        <label className="label" htmlFor="Name">Your Name</label>
-                        <Field
-                        className="input"
-                        name="Name"
-                        component="input"
-                        type="text"
-                        placeholder="your name"
-                        />
-                        <Error name="Name" />
-                    </div>
-
-                    <div className="field">
-                        <label className="label" htmlFor="email">Email</label>
-                        <Field
-                        className="input"
-                        name="email"
-                        component="input"
-                        type="email"
-                        placeholder="email"
-                        />
-                        <Error name="email" />
-                    </div>
-
-                    <div className="field">
-                        <label className="label" htmlFor="tel">Contact Number</label>
-                        <Field
-                        className="input"
-                        name="tel"
-                        component="input"
-                        type="tel"
-                        placeholder="contact number"
-                        />
-                        <Error name="tel" />
-                    </div>
-                    <div className="field">
-                        <label className="label" htmlFor="size">Box Size</label>
-                        <div className="control">
-                        <label className="label" htmlFor="size">
-                        <Field className="input" name="size" component="select">
-                            <option value="" disabled>- select size -</option>
-                            <option value="Small">Small - £10</option>
-                            <option value="Large">Large - £15</option>
-                        </Field>
-                        </label>
-                    </div>
-                    </div>
-                    <div class="field">
-                        <div class="control">
-                        <label className="label" htmlFor="transport">Transport</label>
-                        <div className="control">
-                        <label class="radio">
-                          <Field
-                            name="transport"
-                            component="input"
-                            type="radio"
-                            value="delivery"
-                          />{' '}
-                            Delivery
-                        </label>
-                        <label class="radio">
-                          <Field
-                            name="transport"
-                            component="input"
-                            type="radio"
-                            value="collect"
-                          />{' '}
-                            Collection
-                        </label>
-                        </div>
-                        </div>
-                        <Error name="transport" />
-                    </div>
-                    <Condition when="transport" is="delivery">
-                      <div className="field">
-                        <div class="control">
-                        <label className="label" htmlFor="address">
-                            Delivery Address
-                        </label>
-                        <sub>(£1.50 charge)</sub>
-                        <Field
-                            className="textarea"
-                            name="address"
-                            component="textarea"
-                            type="textarea"
-                            placeholder="delivery address"
-                        />
-                        <Error name="address" />
-                        </div>
-                      </div>
-                    </Condition>
-
-                    <div className="field">
-                        <div class="control">
-                        <label className="label" htmlFor="comment">
-                            Comment/Request
-                        </label>
-                        <Field
-                            className="textarea"
-                            name="comment"
-                            component="textarea"
-                            type="textarea"
-                            placeholder="comment/request"
-                        />
-                        <Error name="comment" />
-                        </div>
-                      </div>
-                    
-                    <div className="buttons">
-                        <button className="button is-link" type="submit">
-                        Subscribe
-                        </button>
-                        <button className="button is-link" type="button" onClick={form.reset} disabled={submitting}>
-                        Reset
-                        </button>
-                    </div>
-                    </form>
-                )}
-                </Form>
+    <Form
+      onSubmit={onSubmit}
+      render={({ handleSubmit, form, submitting, pristine }) => (
+        <form 
+          onSubmit={handleSubmit}
+          name="subscription1"
+          method="post"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+        >
+          {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
+          <input type="hidden" name="form-name" value="subscription1" />
+          <div hidden>
+            <label>Don’t fill out:{' '}<input name="bot-field" /></label>
+          </div>
+          <div>
+            <label>First Name</label>
+            <Field
+              name="firstName"
+              component="input"
+              type="text"
+              placeholder="First Name"
+            />
+          </div>
+          <div>
+            <label>Last Name</label>
+            <Field
+              name="lastName"
+              component="input"
+              type="text"
+              placeholder="Last Name"
+            />
+          </div>
+          <div>
+            <label>Employed</label>
+            <Field name="employed" component="input" type="checkbox" />
+          </div>
+          <div>
+            <label>Favorite Color</label>
+            <Field name="favoriteColor" component="select">
+              <option />
+              <option value="#ff0000">❤️ Red</option>
+              <option value="#00ff00">💚 Green</option>
+              <option value="#0000ff">💙 Blue</option>
+            </Field>
+          </div>
+          <div>
+            <label>Toppings</label>
+            <Field name="toppings" component="select" multiple>
+              <option value="chicken">🐓 Chicken</option>
+              <option value="ham">🐷 Ham</option>
+              <option value="mushrooms">🍄 Mushrooms</option>
+              <option value="cheese">🧀 Cheese</option>
+              <option value="tuna">🐟 Tuna</option>
+              <option value="pineapple">🍍 Pineapple</option>
+            </Field>
+          </div>
+          <div>
+            <label>Sauces</label>
+            <div>
+              <label>
+                <Field
+                  name="sauces"
+                  component="input"
+                  type="checkbox"
+                  value="ketchup"
+                />{' '}
+                Ketchup
+              </label>
+              <label>
+                <Field
+                  name="sauces"
+                  component="input"
+                  type="checkbox"
+                  value="mustard"
+                />{' '}
+                Mustard
+              </label>
+              <label>
+                <Field
+                  name="sauces"
+                  component="input"
+                  type="checkbox"
+                  value="mayonnaise"
+                />{' '}
+                Mayonnaise
+              </label>
+              <label>
+                <Field
+                  name="sauces"
+                  component="input"
+                  type="checkbox"
+                  value="guacamole"
+                />{' '}
+                Guacamole 🥑
+              </label>
             </div>
-        </div>
-    </section>
+          </div>
+          <div>
+            <label>Best Stooge</label>
+            <div>
+              <label>
+                <Field
+                  name="stooge"
+                  component="input"
+                  type="radio"
+                  value="larry"
+                />{' '}
+                Larry
+              </label>
+              <label>
+                <Field
+                  name="stooge"
+                  component="input"
+                  type="radio"
+                  value="moe"
+                />{' '}
+                Moe
+              </label>
+              <label>
+                <Field
+                  name="stooge"
+                  component="input"
+                  type="radio"
+                  value="curly"
+                />{' '}
+                Curly
+              </label>
+            </div>
+          </div>
+          <div>
+            <label>Notes</label>
+            <Field 
+              name="notes" 
+              component="textarea" 
+              placeholder="Notes" 
+            />
+          </div>
+          <div className="buttons">
+            <button 
+              type="submit" 
+              disabled={submitting || pristine}
+            >
+              Submit
+            </button>
+            <button
+              type="button"
+              onClick={form.reset}
+              disabled={submitting || pristine}
+            >
+              Reset
+            </button>
+          </div>
+        </form>
+      )}
+    />
 )
 
 export default ConditionalForm1
