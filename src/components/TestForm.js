@@ -1,168 +1,114 @@
 import React from 'react'
-import { Form, Field } from 'react-final-form'
+import { navigate } from 'gatsby-link'
 
-const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
-
-const onSubmit = async values => {
-  await sleep(300)
-  window.alert(JSON.stringify(values, 0, 2))
+function encode(data) {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&')
 }
 
-const TestForm = () => (
-    <Form
-      onSubmit={onSubmit}
-      render={({ handleSubmit, form, submitting, pristine }) => (
-        <form 
-            name="test"
-            onSubmit={handleSubmit}
-            method="POST"
-            action="/contact/thanks/"
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
-        >
-            {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-            <input type="hidden" name="form-name" value="test" />
+export default class Index extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = { isValidated: false }
+  }
+
+  handleChange = (e) => {
+    this.setState({ [e.target.name]: e.target.value })
+  }
+
+  handleSubmit = (e) => {
+    e.preventDefault()
+    const form = e.target
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({
+        'form-name': form.getAttribute('name'),
+        ...this.state,
+      }),
+    })
+      .then(() => navigate(form.getAttribute('action')))
+      .catch((error) => alert(error))
+  }
+
+  render() {
+    return (
+
+        <section className="section">
+          <div className="container">
+            <div className="content">
+              <h1>Join Our Veg Club</h1>
+              <form
+                name="test"
+                method="post"
+                action="/contact/thanks/"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
+                onSubmit={this.handleSubmit}
+              >
+                {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
+                <input type="hidden" name="form-name" value="test" />
                 <div hidden>
                   <label>
                     Don’t fill this out:{' '}
-                    <input name="bot-field" />
+                    <input name="bot-field" onChange={this.handleChange} />
                   </label>
                 </div>
-          <div class="field">
-            <label className="label">First Name</label>
-            <Field
-              name="firstName"
-              component="input"
-              type="text"
-              placeholder="First Name"
-            />
-          </div>
-          <div class="field">
-            <label className="label">Last Name</label>
-            <Field 
-              name="lastName"
-              component="input"
-              type="text"
-              placeholder="Last Name"
-            />
-          </div>
-          <div class="field">
-            <label className="label">Employed</label>
-            <Field name="employed" component="input" type="checkbox" />
-          </div>
-          <div class="field">
-            <label className="label">Favorite Color</label>
-            <Field name="favoriteColor" component="select">
-              <option />
-              <option value="#ff0000">❤️ Red</option>
-              <option value="#00ff00">💚 Green</option>
-              <option value="#0000ff">💙 Blue</option>
-            </Field>
-          </div>
-          <div class="field">
-            <label className="label">Toppings</label>
-            <Field name="toppings" component="select" multiple>
-              <option value="chicken">🐓 Chicken</option>
-              <option value="ham">🐷 Ham</option>
-              <option value="mushrooms">🍄 Mushrooms</option>
-              <option value="cheese">🧀 Cheese</option>
-              <option value="tuna">🐟 Tuna</option>
-              <option value="pineapple">🍍 Pineapple</option>
-            </Field>
-          </div>
-          <div class="field">
-            <label className="label">Sauces</label>
-            <div class="field">
-              <label class="label">
-                <Field
-                  name="sauces"
-                  component="input"
-                  type="checkbox"
-                  value="ketchup"
-                />{' '}
-                Ketchup
-              </label>
-              <label class="label">
-                <Field
-                  name="sauces"
-                  component="input"
-                  type="checkbox"
-                  value="mustard"
-                />{' '}
-                Mustard
-              </label>
-              <label class="label">
-                <Field
-                  name="sauces"
-                  component="input"
-                  type="checkbox"
-                  value="mayonnaise"
-                />{' '}
-                Mayonnaise
-              </label>
-              <label class="label">
-                <Field
-                  name="sauces"
-                  component="input"
-                  type="checkbox"
-                  value="guacamole"
-                />{' '}
-                Guacamole
-              </label>
+                <div className="field">
+                  <label className="label" htmlFor={'name'}>
+                    Your name
+                  </label>
+                  <div className="control">
+                    <input
+                      className="input"
+                      type={'text'}
+                      name={'name'}
+                      onChange={this.handleChange}
+                      id={'name'}
+                      required={true}
+                    />
+                  </div>
+                </div>
+                <div className="field">
+                  <label className="label" htmlFor={'email'}>
+                    Email
+                  </label>
+                  <div className="control">
+                    <input
+                      className="input"
+                      type={'email'}
+                      name={'email'}
+                      onChange={this.handleChange}
+                      id={'email'}
+                      required={true}
+                    />
+                  </div>
+                </div>
+                <div className="field">
+                  <label className="label" htmlFor={'message'}>
+                    Message
+                  </label>
+                  <div className="control">
+                    <textarea
+                      className="textarea"
+                      name={'message'}
+                      onChange={this.handleChange}
+                      id={'message'}
+                      required={true}
+                    />
+                  </div>
+                </div>
+                <div className="field">
+                  <button className="button is-link" type="submit">
+                    Send
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
-          <div>
-            <label className="label">Best Stooge</label>
-            <div>
-              <label class="label">
-                <Field
-                  name="stooge"
-                  component="input"
-                  type="radio"
-                  value="larry"
-                />{' '}
-                Larry
-              </label>
-              <label class="label">
-                <Field
-                  name="stooge"
-                  component="input"
-                  type="radio"
-                  value="moe"
-                />{' '}
-                Moe
-              </label>
-              <label class="label">
-                <Field
-                  name="stooge"
-                  component="input"
-                  type="radio"
-                  value="curly"
-                />{' '}
-                Curly
-              </label>
-            </div>
-          </div>
-          <div class="field">
-            <label className="label">Notes</label>
-            <Field className="textarea" name="notes" component="textarea" placeholder="Notes" />
-          </div>
-          <div className="buttons">
-            <button className="button is-link" type="submit" disabled={submitting || pristine}>
-              Submit
-            </button>
-            <button
-              type="button"
-              onClick={form.reset}
-              disabled={submitting || pristine}
-              className="button is-link"
-            >
-              Reset
-            </button>
-          </div>
-        </form>
-      )}
-    />
-)
+        </section>
 
-export default TestForm
+    )
+  }
+}
