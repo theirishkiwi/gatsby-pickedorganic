@@ -9,7 +9,7 @@ const onSubmit = async values => {
 }
 
 const Error = ({ name }) => (
-  <Field name={name} subscription={{ error: true, touched: true }}>
+  <Field name={name} subscription1={{ error: true, touched: true }}>
     {({ meta: { error, touched } }) =>
       error && touched ? <span style={{color: "#ff4d4d"}}>{error}</span> : null
     }
@@ -17,7 +17,7 @@ const Error = ({ name }) => (
 )
 
 const Condition = ({ when, is, children }) => (
-  <Field name={when} subscription={{ value: true }}>
+  <Field name={when} subscription1={{ value: true }}>
     {({ input: { value } }) => (value === is ? children : null)}
   </Field>
 )
@@ -60,7 +60,7 @@ const ConditionalForm1 = () => (
                 >
                 {({ handleSubmit, form, submitting, pristine }) => (
                     <form
-                    name="subscription"
+                    name="subscription1"
                     method="post"
                     data-netlify="true"
                     data-netlify-honeypot="bot-field"
