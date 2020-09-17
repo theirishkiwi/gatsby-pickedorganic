@@ -6,18 +6,19 @@ const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
 const onSubmit = async values => {
   await sleep(300)
   window.alert(JSON.stringify(values, 0, 2))
+  
 }
 
 const Error = ({ name }) => (
-  <Field name={name} subscription={{ error: true, touched: true }}>
+  <Field name={name} subscription2={{ error: true, touched: true }}>
     {({ meta: { error, touched } }) =>
-      error && touched ? <span>{error}</span> : null
+      error && touched ? <span style={{color: "#ff4d4d"}}>{error}</span> : null
     }
   </Field>
 )
 
 const Condition = ({ when, is, children }) => (
-  <Field name={when} subscription={{ value: true }}>
+  <Field name={when} subscription2={{ value: true }}>
     {({ input: { value } }) => (value === is ? children : null)}
   </Field>
 )
@@ -44,33 +45,32 @@ const ConditionalForm = () => (
                     if (!values.size) {
                         errors.size = 'Required'
                     }
-                    if (!values.transport) {
-                        errors.transport = 'Required'
-                    }
                     if (values.transport === 'delivery') {
                     if (!values.address) {
                         errors.address = 'Required'
                     }
                    }
+                    if (!values.transport) {
+                        errors.transport = 'Required'
+                    }
                     return errors
                 }}
                 >
-                {({ handleSubmit, form, submitting, pristine, values }) => (
+                {({ handleSubmit, form, submitting, pristine }) => (
                     <form
-                    name="subscription"
+                    name="subscription2"
                     method="post"
-                    action="/contact/thanks/"
                     data-netlify="true"
                     data-netlify-honeypot="bot-field"
                     onSubmit={handleSubmit}
                     >
                     {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-                    <input type="hidden" name="form-name" value="contact" />
+                    <input type="hidden" name="form-name" value="subscription2" />
                     <div hidden>
                     <label>Don’t fill out:{' '}<input name="bot-field" /></label>
                     </div>
                     <div className="field">
-                        <label className="label">Your Name</label>
+                        <label className="label" for="yourName">Your Name</label>
                         <Field
                         name="yourName"
                         className="input"
@@ -82,7 +82,7 @@ const ConditionalForm = () => (
                     </div>
 
                     <div className="field">
-                        <label className="label">Email</label>
+                        <label className="label" for="email">Email</label>
                         <Field
                         name="email"
                         className="input"
@@ -94,7 +94,7 @@ const ConditionalForm = () => (
                     </div>
 
                     <div className="field">
-                        <label className="label">Contact Number</label>
+                        <label className="label" for="phone">Contact Number</label>
                         <Field
                         name="phone"
                         className="input"
@@ -105,23 +105,20 @@ const ConditionalForm = () => (
                         <Error name="phone" />
                     </div>
                     <div className="field">
-                        <label className="label" >Box Size</label>
-                        <div className="control">
-                        <label className="label" htmlFor="size">
+                        <label className="label" for="size">Box Size</label>
                         <Field 
-                            name="size"
-                            className="input" 
-                            component="select">
-                            <option value="" disabled>** select size **</option>
+                          name="size"
+                          className="input"
+                          component="select">
+                            <option value="" disabled>- select size -</option>
                             <option value="Small">Small - £10</option>
                             <option value="Large">Large - £15</option>
                         </Field>
-                        </label>
-                    </div>
+                        <Error name="size" />
                     </div>
                     <div class="field">
                         <div class="control">
-                        <label className="label">Transport</label>
+                        <label className="label" for="transport">Transport</label>
                         <div className="control">
                         <label class="radio">
                           <Field
@@ -132,14 +129,12 @@ const ConditionalForm = () => (
                           />{' '}
                             Delivery
                         </label>
-                        <label class="radio" for="collection">
+                        <label class="radio">
                           <Field
                             name="transport"
                             component="input"
                             type="radio"
-                            id="collection"
-                            value="collection"
-                            defaultChecked
+                            value="collect"
                           />{' '}
                             Collection
                         </label>
@@ -150,7 +145,7 @@ const ConditionalForm = () => (
                     <Condition when="transport" is="delivery">
                       <div className="field">
                         <div class="control">
-                        <label className="label">
+                        <label className="label" for="address">
                             Delivery Address
                         </label>
                         <sub>(£1.50 charge)</sub>
@@ -168,7 +163,7 @@ const ConditionalForm = () => (
 
                     <div className="field">
                         <div class="control">
-                        <label className="label">
+                        <label className="label" for="requests">
                             Comment/Requests
                         </label>
                         <Field
@@ -183,10 +178,10 @@ const ConditionalForm = () => (
                       </div>
                     
                     <div className="buttons">
-                        <button className="button is-link" type="submit" disabled={submitting}>
+                        <button className="button is-link" type="submit" disabled={submitting || pristine}>
                         Subscribe
                         </button>
-                        <button className="button is-link" type="button" onClick={form.reset} disabled={submitting}>
+                        <button className="button is-link" type="button" onClick={form.reset} disabled={submitting || pristine}>
                         Reset
                         </button>
                     </div>
