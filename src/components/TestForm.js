@@ -7,26 +7,28 @@ function encode(data) {
     .join('&');
 }
 
-/*function Address() {
-  return (
-    <div className="field">
-        <label className="label" htmlFor={'address'}>
-          Delivery Address
-        </label>
-        <sub>(£1.50 charge)</sub>
-        <div className="control">
-          <textarea
-            name={'address'}
-            className="textarea"
-            id={'address'}
-            type={'textarea'}
-            required={true}
-            placeholder={'delivery address'}
-          />
+class Address extends React.Component {
+    render() {
+    return (
+      <div className="field">
+          <label className="label" htmlFor={'address'}>
+            Delivery Address
+          </label>
+          <sub>(£1.50 charge)</sub>
+          <div className="control">
+            <textarea
+              name={'address'}
+              className="textarea"
+              id={'address'}
+              type={'textarea'}
+              required={true}
+              placeholder={'delivery address'}
+            />
+        </div>
       </div>
-    </div>
-  );
-}*/
+    );
+  }
+}
 
 class TestForm extends React.Component {
   constructor(props) {
@@ -219,26 +221,7 @@ class TestForm extends React.Component {
                     </div>
                   </div>
 
-                { this.state.showAddress ?
-                <>
-                <div className="field">
-                  <label className="label" htmlFor={'address'}>
-                    Delivery Address
-                  </label>
-                  <sub>(£1.50 charge)</sub>
-                <div className="control">
-                  <textarea
-                    name={'address'}
-                    className="textarea"
-                    onChange={this.handleChange}
-                    value={this.state.value}
-                    id={'address'}
-                    required={true}
-                    placeholder={'delivery address'}
-                  />
-                </div>
-              </div>
-              </>: null }
+                { this.state.showAddress ? <Address />: null }
 
               <div className="field">
                 <label className="label" htmlFor={'message'}>
