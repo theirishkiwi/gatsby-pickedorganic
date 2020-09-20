@@ -34,18 +34,6 @@ class TestForm extends React.Component {
     this.state = { isValidated: false };
   }
 
-  state = {
-    showAddress: false
-  }
-
-  showAddress(event) {
-    if (event.target.value === "delivery") {
-      this.setState({ showAddress: true });
-    } else {
-      this.setState({ showAddress: false });
-    }
-  }
-
   handleChange = (e) => {
     this.setState({ [e.target.name]: e.target.value })
   }
@@ -64,6 +52,20 @@ class TestForm extends React.Component {
       .then(() => navigate(form.getAttribute('action')))
       .catch((error) => alert(error));
   }
+  
+
+  state = {
+    showAddress: false
+  }
+
+  showAddress(event) {
+    if (event.target.value === "delivery") {
+      this.setState({ showAddress: true });
+    } else {
+      this.setState({ showAddress: false });
+    }
+  }
+
 
   render() {
     return (
@@ -229,6 +231,7 @@ class TestForm extends React.Component {
                     name={'address'}
                     className="textarea"
                     onChange={this.handleChange}
+                    value={this.state.value}
                     id={'address'}
                     required={true}
                     placeholder={'delivery address'}
