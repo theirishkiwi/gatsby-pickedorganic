@@ -217,7 +217,6 @@ class TestForm extends React.Component {
                     </div>
                   </div>
 
-              <div>
                 { this.state.showAddress ?
                 <>
                 <div className="field">
@@ -231,16 +230,13 @@ class TestForm extends React.Component {
                     className="textarea"
                     onChange={this.handleChange}
                     id={'address'}
-                    type={'textarea'}
                     required={true}
-                    placeholder={'delivery address'
-                }
-                />
+                    placeholder={'delivery address'}
+                  />
                 </div>
               </div>
               </>
                : null }
-               </div>
 
               <div className="field">
                 <label className="label" htmlFor={'message'}>
