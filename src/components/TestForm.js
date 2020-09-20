@@ -102,33 +102,35 @@ class TestForm extends React.Component {
                 />
               </div>
               </div>
-              <div className='field'>
-                <label className='label' htmlFor={'email'}>
+              <div className="field">
+                <label className="label" htmlFor={'email'}>
                   Email
                 </label>
-                <div className='control'>
+                <div className="control">
                   <input
-                    className='input'
-                    type='email'
-                    name='email'
+                    className="input"
+                    type={'email'}
+                    name={'email'}
                     onChange={this.handleChange}
-                    id='email'
+                    id={'email'}
                     required={true}
-                    placeholder='email'
+                    placeholder={'email'}
                   />
                 </div>
               </div>
 
-              <div className='field'>
-                        <label className='label' htmlFor={'phone'}>Contact Number</label>
-                        <input
-                        name={'phone'}
-                        className={'input'}
-                        component={'input'}
-                        type={'tel'}
-                        required={true}
-                        placeholder={'contact number'}
-                        />
+              <div className="field">
+                    <label className="label" htmlFor={'phone'}>
+                      Contact Number
+                    </label>
+                    <input
+                      className="input"
+                      type={'tel'}
+                      name={'phone'}
+                      onChange={this.handleChange}
+                      required={true}
+                      placeholder={'contact number'}
+                    />
                     </div>
                     <div className='field'>
                         <label className='label' htmlFor='size'>Box Size</label>
@@ -144,30 +146,32 @@ class TestForm extends React.Component {
                         </select>
                     </div>
 
-                      <div class='field'>
-                        <div class='control'>
-                        <label className='label' htmlFor='frequency'>Frequency</label>
-                          <div className='control'>
-                          <label class='radio'>
-                            <input
-                              name='frequency'
-                              component='input'
-                              type='radio'
-                              defaultChecked
-                              value='weekly'
-                            />{' '}
-                              Weekly
+                    <div class="field">
+                      <div class="control">
+                      <label className="label" htmlFor={'frequency'}>
+                        Frequency
+                      </label>
+                        <label class='radio'>
+                          <input
+                            name='frequency'
+                            component='input'
+                            type='radio'
+                            defaultChecked
+                            onChange={this.handleChange}
+                            value='weekly'
+                          />{' '}
+                            Weekly
                         </label>
                         <label class='radio'>
                             <input
                               name='frequency'
                               component='input'
                               type='radio'
+                              onChange={this.handleChange}
                               value='fortnightly'
                             />{' '}
                               Fortnightly
                         </label>
-                        </div>
                       </div>
                     </div>
 
@@ -182,6 +186,7 @@ class TestForm extends React.Component {
                               component='input'
                               type='radio'
                               required={true}
+                              onChange={this.handleChange}
                               value='collection'
                             />{' '}
                               Collection
@@ -192,6 +197,7 @@ class TestForm extends React.Component {
                               component='input'
                               type='radio'
                               required={true}
+                              onChange={this.handleChange}
                               value='delivery'
                             />{' '}
                               Delivery
@@ -203,13 +209,13 @@ class TestForm extends React.Component {
 
               <div>{this.state.showAddress ? <Address /> : null}</div>
 
-              <div className='field'>
-                <label className='label' htmlFor={'message'}>
+              <div className="field">
+                <label className="label" htmlFor={'message'}>
                   Comment/Requests
                 </label>
-                <div className='control'>
+                <div className="control">
                   <textarea
-                    className='textarea'
+                    className="textarea"
                     name={'message'}
                     onChange={this.handleChange}
                     id={'message'}
@@ -219,7 +225,7 @@ class TestForm extends React.Component {
                 </div>
               </div>
 
-              <div className='buttons'>
+              <div className="buttons">
                 <button className='button is-link' type='submit'>
                   Subscribe!
                 </button>
