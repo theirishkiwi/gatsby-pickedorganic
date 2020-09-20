@@ -7,29 +7,6 @@ function encode(data) {
     .join('&');
 }
 
-class Address extends React.Component {
-    render() {
-    return (
-      <div className="field">
-          <label className="label" htmlFor={'address'}>
-            Delivery Address
-          </label>
-          <sub>(£1.50 charge)</sub>
-          <div className="control">
-            <textarea
-              name={'address'}
-              className="textarea"
-              id={'address'}
-              type={'textarea'}
-              required={true}
-              placeholder={'delivery address'}
-            />
-        </div>
-      </div>
-    );
-  }
-}
-
 class TestForm extends React.Component {
   constructor(props) {
     super(props);
@@ -221,7 +198,23 @@ class TestForm extends React.Component {
                     </div>
                   </div>
 
-                { this.state.showAddress ? <Address />: null }
+                <div className="field">
+                    <label className="label" htmlFor={"address"}>
+                      Delivery Address
+                    </label>
+                    <sub>(£2.50 charge)</sub>
+                    <div className="control">
+                      <textarea
+                        name={"address"}
+                        className="textarea"
+                        id={"address"}
+                        type={"textarea"}
+                        onChange={this.handleChange}
+                        required={false}
+                        placeholder={"delivery address"}
+                      />
+                    </div>
+                  </div>
 
               <div className="field">
                 <label className="label" htmlFor={'message'}>
