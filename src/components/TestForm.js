@@ -142,19 +142,19 @@ class TestForm extends React.Component {
                           required={true}
                           id={'size'}
                           onBlur={this.handleChange}>
-                            <option value="" disabled selected>- select size -</option>
+                            <option value="" disabled defaultValue>- select size -</option>
                             <option value="Small">Small - £10</option>
                             <option value="Large">Large - £15</option>
                         </select>
                     </div>
 
-                    <div class="field">
-                      <div class="control">
+                    <div className="field">
+                      <div className="control">
                       <label className="label" htmlFor={'frequency'}>
                         Frequency
                       </label>
                       <div className="control">
-                        <label class="radio">
+                        <label className="radio">
                           <input
                             name={'frequency'}
                             component="input"
@@ -166,7 +166,7 @@ class TestForm extends React.Component {
                           />{' '}
                             Weekly
                         </label>
-                        <label class="radio">
+                        <label className="radio">
                             <input
                               name={'frequency'}
                               component="input"
@@ -182,13 +182,13 @@ class TestForm extends React.Component {
                       </div>
                     </div>
                     <div className="field" onChange={(event) => this.showAddress(event)}>
-                      <div class="field">
-                        <div class="control">
+                      <div className="field">
+                        <div className="control">
                         <label className="label" htmlFor={'transport'}>
                           Transport
                           </label>
                           <div className="control">
-                          <label class="radio">
+                          <label className="radio">
                             <input
                               name={'transport'}
                               component="input"
@@ -200,7 +200,7 @@ class TestForm extends React.Component {
                             />{' '}
                               Collection
                         </label>
-                        <label class="radio">
+                        <label className="radio">
                             <input
                               name={'transport'}
                               component="input"
@@ -235,8 +235,7 @@ class TestForm extends React.Component {
                   />
                 </div>
               </div>
-              </>
-               : null }
+              </>: null }
 
               <div className="field">
                 <label className="label" htmlFor={'message'}>
