@@ -212,6 +212,7 @@ class TestForm extends React.Component {
                         id={"address"}
                         type={"textarea"}
                         onChange={this.handleChange}
+                        defaultValue={"junk"}
                         required={false}
                         placeholder={"delivery address"}
                       />
