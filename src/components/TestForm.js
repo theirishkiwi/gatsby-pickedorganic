@@ -1,5 +1,5 @@
-import React from 'react';
-import { navigate } from 'gatsby-link';
+import React from 'react'
+import { navigate } from 'gatsby-link'
 
 function encode(data) {
   return Object.keys(data)
@@ -8,7 +8,6 @@ function encode(data) {
 }
 
 function Address() {
-  console.log('show address');
   return (
     <div className='field'>
       <div className='control'>
@@ -34,13 +33,9 @@ class TestForm extends React.Component {
     this.state = { isValidated: false };
   }
 
-  handleChange = (e) => {
-    this.setState({ [e.target.name]: e.target.value })
-  }
-
   state = {
     showAddress: false
-  };
+  }
 
   showAddress(event) {
     if (event.target.value === 'delivery') {
@@ -48,6 +43,10 @@ class TestForm extends React.Component {
     } else {
       this.setState({ showAddress: false });
     }
+  }
+
+  handleChange = (e) => {
+    this.setState({ [e.target.name]: e.target.value })
   }
 
   handleSubmit = (e) => {
@@ -59,11 +58,11 @@ class TestForm extends React.Component {
       body: encode({
         'form-name': form.getAttribute('name'),
         ...this.state
-      })
+      }),
     })
       .then(() => navigate(form.getAttribute('action')))
       .catch((error) => alert(error));
-  };
+  }
 
   render() {
     return (
@@ -71,30 +70,29 @@ class TestForm extends React.Component {
         <div className='container'>
           <div className='content'>
             <h1>Join Our Veg Club!</h1>
-
             <form
-              name='subscription'
-              method='post'
-              action='/contact/thanks/'
-              data-netlify='true'
-              data-netlify-honeypot='bot-field'
+              name="subscription"
+              method="post"
+              action="/contact/thanks/"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
               onSubmit={this.handleSubmit}
             >
               {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-              <input type='hidden' name='form-name' value='subscription' />
+              <input type="hidden" name="form-name" value="subscription" />
               <div hidden>
                 <label>
                   Don’t fill this out:{' '}
-                  <input name='bot-field' onChange={this.handleChange} />
+                  <input name="bot-field" onChange={this.handleChange} />
                 </label>
               </div>
-              <div className='field'>
-                <label className='label' htmlFor={'name'}>
+              <div className="field">
+                <label className="label" htmlFor={'name'}>
                   Your name
                 </label>
                 <div className="control">
                 <input
-                  className={'input'}
+                  className="input"
                   type={'text'}
                   name={'name'}
                   onChange={this.handleChange}
