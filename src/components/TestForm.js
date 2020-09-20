@@ -18,7 +18,8 @@ function Address() {
         <textarea
           name={'address'}
           className="textarea"
-          onChange={this.handleChange}
+          /*onChange={this.handleChange}*/
+          id={'address'}
           type={'textarea'}
           placeholder={'delivery address'}
         />
@@ -152,11 +153,13 @@ class TestForm extends React.Component {
                       <label className="label" htmlFor={'frequency'}>
                         Frequency
                       </label>
+                      <div className="control">
                         <label class="radio">
                           <input
                             name={'frequency'}
-                            component='input'
+                            component="input"
                             type={'radio'}
+                            required={true}
                             defaultChecked
                             onChange={this.handleChange}
                             id={'weekly'}
@@ -169,6 +172,7 @@ class TestForm extends React.Component {
                               name={'frequency'}
                               component="input"
                               type={'radio'}
+                              required={true}
                               onChange={this.handleChange}
                               id={'fortnightly'}
                               value={'fortnightly'}
@@ -176,12 +180,14 @@ class TestForm extends React.Component {
                               Fortnightly
                         </label>
                       </div>
+                      </div>
                     </div>
-
                     <div className="field" onChange={(event) => this.showAddress(event)}>
                       <div class="field">
                         <div class="control">
-                        <label className="label" htmlFor={'transport'}>Transport</label>
+                        <label className="label" htmlFor={'transport'}>
+                          Transport
+                          </label>
                           <div className="control">
                           <label class="radio">
                             <input
