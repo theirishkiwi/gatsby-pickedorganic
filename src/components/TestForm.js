@@ -198,7 +198,9 @@ class TestForm extends React.Component {
                     </div>
                   </div>
 
-                <div className="field">
+              {this.state.showAddress ? (
+                <>
+                  <div className="field">
                     <label className="label" htmlFor={"address"}>
                       Delivery Address
                     </label>
@@ -215,6 +217,8 @@ class TestForm extends React.Component {
                       />
                     </div>
                   </div>
+                </>
+              ) : null}
 
               <div className="field">
                 <label className="label" htmlFor={'message'}>
