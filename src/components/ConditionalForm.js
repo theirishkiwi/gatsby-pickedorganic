@@ -4,9 +4,8 @@ import { Form, Field } from 'react-final-form'
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
 
 const onSubmit = async values => {
-  await sleep(300)
+  await sleep(300)  
   window.alert(JSON.stringify(values, 0, 2))
-  
 }
 
 const Error = ({ name }) => (
@@ -60,6 +59,7 @@ const ConditionalForm = () => (
                     <form
                     name="subscription2"
                     method="post"
+                    action="/contact/thanks/"
                     data-netlify="true"
                     data-netlify-honeypot="bot-field"
                     onSubmit={handleSubmit}
