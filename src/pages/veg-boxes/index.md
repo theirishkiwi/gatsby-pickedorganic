@@ -1,7 +1,7 @@
 ---
 templateKey: 'product-page'
 path: /veg-boxes
-title: Our Veg Boxes
+title: Our Veg Club
 image: /img/jumbotron.jpg
 heading: Sustainably growing real food with a Conscience (for the local community) 
 description: >-

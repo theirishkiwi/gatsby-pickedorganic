@@ -7,26 +7,26 @@ function encode(data) {
     .join('&');
 }
 
-function Address() {
+/*function Address() {
   return (
     <div className="field">
-      <div className="control">
         <label className="label" htmlFor={'address'}>
           Delivery Address
         </label>
         <sub>(£1.50 charge)</sub>
-        <textarea
-          name={'address'}
-          className="textarea"
-          /*onChange={this.handleChange}*/
-          id={'address'}
-          type={'textarea'}
-          placeholder={'delivery address'}
-        />
+        <div className="control">
+          <textarea
+            name={'address'}
+            className="textarea"
+            id={'address'}
+            type={'textarea'}
+            required={true}
+            placeholder={'delivery address'}
+          />
       </div>
     </div>
   );
-}
+}*/
 
 class TestForm extends React.Component {
   constructor(props) {
@@ -218,13 +218,29 @@ class TestForm extends React.Component {
                   </div>
 
               <div>
-                {
-                  this.state.showAddress ? 
-                  <Address 
+                { this.state.showAddress ?
+                <>
+                <div className="field">
+                  <label className="label" htmlFor={'address'}>
+                    Delivery Address
+                  </label>
+                  <sub>(£1.50 charge)</sub>
+                <div className="control">
+                  <textarea
+                    name={'address'}
+                    className="textarea"
                     onChange={this.handleChange}
-                  /> : null
+                    id={'address'}
+                    type={'textarea'}
+                    required={true}
+                    placeholder={'delivery address'
                 }
+                />
+                </div>
               </div>
+              </>
+               : null }
+               </div>
 
               <div className="field">
                 <label className="label" htmlFor={'message'}>

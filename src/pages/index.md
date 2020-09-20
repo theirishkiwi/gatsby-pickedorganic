@@ -2,12 +2,12 @@
 templateKey: index-page
 title: Picked Organic
 image: /img/home-jumbotron.jpg
-heading: Choose Your Veg Box Below!
+heading: Join our veg club
 subheading: Pick your veg box below
 mainpitch:
-  title: Picked Organic - Great Veg, ripe and in season!
+  title: Welcome to Picked Organic
   description: >
-    Picked is a Market Garden... can add a blurb here if you wanted or just remove?
+    Sustainably growing real food with a conscience.
 description: >-
 intro:
   blurbs:
