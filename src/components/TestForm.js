@@ -1,27 +1,27 @@
-import React from "react";
-import { navigate } from "gatsby-link";
+import React from 'react';
+import { navigate } from 'gatsby-link';
 
 function encode(data) {
   return Object.keys(data)
-    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&");
+    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&');
 }
 
 function Address() {
-  console.log("show address");
+  console.log('show address');
   return (
-    <div className="field">
-      <div className="control">
-        <label className="label" htmlFor="address">
+    <div className='field'>
+      <div className='control'>
+        <label className='label' htmlFor='address'>
           Delivery Address
         </label>
         <sub>(£1.50 charge)</sub>
         <textarea
-          name="address"
-          className="textarea"
-          component="textarea"
-          type="textarea"
-          placeholder="delivery address"
+          name='address'
+          className='textarea'
+          component='textarea'
+          type='textarea'
+          placeholder='delivery address'
         />
       </div>
     </div>
@@ -39,7 +39,7 @@ class TestForm extends React.Component {
   };
 
   showAddress(event) {
-    if (event.target.value === "delivery") {
+    if (event.target.value === 'delivery') {
       this.setState({ showAddress: true });
     } else {
       this.setState({ showAddress: false });
@@ -49,74 +49,74 @@ class TestForm extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({
-        "form-name": form.getAttribute("name"),
+        'form-name': form.getAttribute('name'),
         ...this.state
       })
     })
-      .then(() => navigate(form.getAttribute("action")))
+      .then(() => navigate(form.getAttribute('action')))
       .catch((error) => alert(error));
   };
 
   render() {
     return (
-      <section className="section">
-        <div className="container">
-          <div className="content">
+      <section className='section'>
+        <div className='container'>
+          <div className='content'>
             <h1>Join Our Veg Club!</h1>
 
             <form
-              name="subscription"
-              method="post"
-              action="/contact/thanks/"
-              data-netlify="true"
-              data-netlify-honeypot="bot-field"
+              name='subscription'
+              method='post'
+              action='/contact/thanks/'
+              data-netlify='true'
+              data-netlify-honeypot='bot-field'
               onSubmit={this.handleSubmit}
             >
               {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-              <input type="hidden" name="form-name" value="subscription" />
+              <input type='hidden' name='form-name' value='subscription' />
               <div hidden>
                 <label>
-                  Don’t fill this out:{" "}
-                  <input name="bot-field" onChange={this.handleChange} />
+                  Don’t fill this out:{' '}
+                  <input name='bot-field' onChange={this.handleChange} />
                 </label>
               </div>
-              <div className="field">
-                <label className="label" htmlFor={"name"}>
+              <div className='field'>
+                <label className='label' htmlFor={'name'}>
                   Your name
                 </label>
                 <input
-                  className={"input"}
-                  type={"text"}
-                  name={"name"}
+                  className={'input'}
+                  type={'text'}
+                  name={'name'}
                   onChange={this.handleChange}
-                  id={"name"}
+                  id={'name'}
                   required={true}
-                  placeholder={"your name"}
+                  placeholder={'your name'}
                 />
               </div>
-              <div className="field">
-                <label className="label" htmlFor={"email"}>
+              <div className='field'>
+                <label className='label' htmlFor={'email'}>
                   Email
                 </label>
-                <div className="control">
+                <div className='control'>
                   <input
-                    className="input"
-                    type="email"
-                    name="email"
+                    className='input'
+                    type='email'
+                    name='email'
                     onChange={this.handleChange}
-                    id="email"
+                    id='email'
                     required={true}
-                    placeholder="email"
+                    placeholder='email'
                   />
                 </div>
               </div>
 
-              <div className="field">
-                        <label className="label" htmlFor={'phone'}>Contact Number</label>
+              <div className='field'>
+                        <label className='label' htmlFor={'phone'}>Contact Number</label>
                         <input
                         name={'phone'}
                         className={'input'}
@@ -126,40 +126,40 @@ class TestForm extends React.Component {
                         placeholder={'contact number'}
                         />
                     </div>
-                    <div className="field">
-                        <label className="label" htmlFor='size'>Box Size</label>
+                    <div className='field'>
+                        <label className='label' htmlFor='size'>Box Size</label>
                         <select
                           name='size'
                           className='input'
                           component='select'
                           required={true}
                           onBlur={this.handleChange}>
-                            <option value="" disabled selected>- select size -</option>
+                            <option value='' disabled selected>- select size -</option>
                             <option value='Small'>Small - £10</option>
                             <option value='Large'>Large - £15</option>
                         </select>
                     </div>
 
-                      <div class="field">
-                        <div class="control">
-                        <label className="label" htmlFor="frequency">Frequency</label>
-                          <div className="control">
-                          <label class="radio">
+                      <div class='field'>
+                        <div class='control'>
+                        <label className='label' htmlFor='frequency'>Frequency</label>
+                          <div className='control'>
+                          <label class='radio'>
                             <input
-                              name="frequency"
-                              component="input"
-                              type="radio"
+                              name='frequency'
+                              component='input'
+                              type='radio'
                               defaultChecked
-                              value="weekly"
+                              value='weekly'
                             />{' '}
                               Weekly
                         </label>
-                        <label class="radio">
+                        <label class='radio'>
                             <input
-                              name="frequency"
-                              component="input"
-                              type="radio"
-                              value="fortnightly"
+                              name='frequency'
+                              component='input'
+                              type='radio'
+                              value='fortnightly'
                             />{' '}
                               Fortnightly
                         </label>
@@ -167,30 +167,30 @@ class TestForm extends React.Component {
                       </div>
                     </div>
 
-                    <div className="field" onChange={(event) => this.showAddress(event)}>
-                      <div class="field">
-                        <div class="control">
-                        <label className="label" htmlFor="transport">Transport</label>
-                          <div className="control">
-                          <label class="radio">
+                    <div className='field' onChange={(event) => this.showAddress(event)}>
+                      <div class='field'>
+                        <div class='control'>
+                        <label className='label' htmlFor='transport'>Transport</label>
+                          <div className='control'>
+                          <label class='radio'>
                             <input
-                              name="transport"
-                              component="input"
-                              type="radio"
+                              name='transport'
+                              component='input'
+                              type='radio'
                               required={true}
-                              value="delivery"
-                            />{' '}
-                              Delivery
-                        </label>
-                        <label class="radio">
-                            <input
-                              name="transport"
-                              component="input"
-                              type="radio"
-                              required={true}
-                              value="collect"
+                              value='collection'
                             />{' '}
                               Collection
+                        </label>
+                        <label class='radio'>
+                            <input
+                              name='transport'
+                              component='input'
+                              type='radio'
+                              required={true}
+                              value='delivery'
+                            />{' '}
+                              Delivery
                         </label>
                         </div>
                       </div>
@@ -199,27 +199,27 @@ class TestForm extends React.Component {
 
               <div>{this.state.showAddress ? <Address /> : null}</div>
 
-              <div className="field">
-                <label className="label" htmlFor={"message"}>
+              <div className='field'>
+                <label className='label' htmlFor={'message'}>
                   Comment/Requests
                 </label>
-                <div className="control">
+                <div className='control'>
                   <textarea
-                    className="textarea"
-                    name={"message"}
+                    className='textarea'
+                    name={'message'}
                     onChange={this.handleChange}
-                    id={"message"}
-                    required={true}
-                    placeholder={"comment/requests"}
+                    id={'message'}
+                    required={false}
+                    placeholder={'comment/requests'}
                   />
                 </div>
               </div>
 
-              <div className="buttons">
-                <button className="button is-link" type="submit">
+              <div className='buttons'>
+                <button className='button is-link' type='submit'>
                   Subscribe!
                 </button>
-                <button className="button is-link" type="reset">
+                <button className='button is-link' type='reset'>
                   Reset
                 </button>
               </div>
