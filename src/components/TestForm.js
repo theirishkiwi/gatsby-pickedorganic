@@ -9,16 +9,16 @@ function encode(data) {
 
 function Address() {
   return (
-    <div className='field'>
-      <div className='control'>
-        <label className='label' htmlFor={'address'}>
+    <div className="field">
+      <div className="control">
+        <label className="label" htmlFor={'address'}>
           Delivery Address
         </label>
         <sub>(£1.50 charge)</sub>
         <textarea
           name={'address'}
-          className={'textarea'}
-          component={'textarea'}
+          className="textarea"
+          onChange={this.handleChange}
           type={'textarea'}
           placeholder={'delivery address'}
         />
@@ -38,7 +38,7 @@ class TestForm extends React.Component {
   }
 
   showAddress(event) {
-    if (event.target.value === 'delivery') {
+    if (event.target.value === "delivery") {
       this.setState({ showAddress: true });
     } else {
       this.setState({ showAddress: false });
@@ -66,9 +66,9 @@ class TestForm extends React.Component {
 
   render() {
     return (
-      <section className='section'>
-        <div className='container'>
-          <div className='content'>
+      <section className="section">
+        <div className="container">
+          <div className="content">
             <h1>Join Our Veg Club!</h1>
             <form
               name="subscription"
@@ -128,21 +128,22 @@ class TestForm extends React.Component {
                       type={'tel'}
                       name={'phone'}
                       onChange={this.handleChange}
+                      id={'phone'}
                       required={true}
                       placeholder={'contact number'}
                     />
                     </div>
-                    <div className='field'>
-                        <label className='label' htmlFor='size'>Box Size</label>
+                    <div className="field">
+                        <label className="label" htmlFor={'size'}>Box Size</label>
                         <select
-                          name='size'
-                          className='input'
-                          component='select'
+                          name={'size'}
+                          className="input"
                           required={true}
+                          id={'size'}
                           onBlur={this.handleChange}>
-                            <option value='' disabled selected>- select size -</option>
-                            <option value='Small'>Small - £10</option>
-                            <option value='Large'>Large - £15</option>
+                            <option value="" disabled selected>- select size -</option>
+                            <option value="Small">Small - £10</option>
+                            <option value="Large">Large - £15</option>
                         </select>
                     </div>
 
@@ -151,54 +152,58 @@ class TestForm extends React.Component {
                       <label className="label" htmlFor={'frequency'}>
                         Frequency
                       </label>
-                        <label class='radio'>
+                        <label class="radio">
                           <input
-                            name='frequency'
+                            name={'frequency'}
                             component='input'
-                            type='radio'
+                            type={'radio'}
                             defaultChecked
                             onChange={this.handleChange}
-                            value='weekly'
+                            id={'weekly'}
+                            value={'weekly'}
                           />{' '}
                             Weekly
                         </label>
-                        <label class='radio'>
+                        <label class="radio">
                             <input
-                              name='frequency'
-                              component='input'
-                              type='radio'
+                              name={'frequency'}
+                              component="input"
+                              type={'radio'}
                               onChange={this.handleChange}
-                              value='fortnightly'
+                              id={'fortnightly'}
+                              value={'fortnightly'}
                             />{' '}
                               Fortnightly
                         </label>
                       </div>
                     </div>
 
-                    <div className='field' onChange={(event) => this.showAddress(event)}>
-                      <div class='field'>
-                        <div class='control'>
-                        <label className='label' htmlFor='transport'>Transport</label>
-                          <div className='control'>
-                          <label class='radio'>
+                    <div className="field" onChange={(event) => this.showAddress(event)}>
+                      <div class="field">
+                        <div class="control">
+                        <label className="label" htmlFor={'transport'}>Transport</label>
+                          <div className="control">
+                          <label class="radio">
                             <input
-                              name='transport'
-                              component='input'
-                              type='radio'
+                              name={'transport'}
+                              component="input"
+                              type={'radio'}
                               required={true}
                               onChange={this.handleChange}
-                              value='collection'
+                              id={'collection'}
+                              value={'collection'}
                             />{' '}
                               Collection
                         </label>
-                        <label class='radio'>
+                        <label class="radio">
                             <input
-                              name='transport'
-                              component='input'
-                              type='radio'
+                              name={'transport'}
+                              component="input"
+                              type={'radio'}
                               required={true}
                               onChange={this.handleChange}
-                              value='delivery'
+                              id={'delivery'}
+                              value={'delivery'}
                             />{' '}
                               Delivery
                         </label>
@@ -226,10 +231,10 @@ class TestForm extends React.Component {
               </div>
 
               <div className="buttons">
-                <button className='button is-link' type='submit'>
+                <button className="button is-link" type="submit">
                   Subscribe!
                 </button>
-                <button className='button is-link' type='reset'>
+                <button className="button is-link" type="reset">
                   Reset
                 </button>
               </div>
