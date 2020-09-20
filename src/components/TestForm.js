@@ -12,16 +12,16 @@ function Address() {
   return (
     <div className='field'>
       <div className='control'>
-        <label className='label' htmlFor='address'>
+        <label className='label' htmlFor={'address'}>
           Delivery Address
         </label>
         <sub>(£1.50 charge)</sub>
         <textarea
-          name='address'
-          className='textarea'
-          component='textarea'
-          type='textarea'
-          placeholder='delivery address'
+          name={'address'}
+          className={'textarea'}
+          component={'textarea'}
+          type={'textarea'}
+          placeholder={'delivery address'}
         />
       </div>
     </div>
@@ -32,6 +32,10 @@ class TestForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = { isValidated: false };
+  }
+
+  handleChange = (e) => {
+    this.setState({ [e.target.name]: e.target.value })
   }
 
   state = {
@@ -88,6 +92,7 @@ class TestForm extends React.Component {
                 <label className='label' htmlFor={'name'}>
                   Your name
                 </label>
+                <div className="control">
                 <input
                   className={'input'}
                   type={'text'}
@@ -97,6 +102,7 @@ class TestForm extends React.Component {
                   required={true}
                   placeholder={'your name'}
                 />
+              </div>
               </div>
               <div className='field'>
                 <label className='label' htmlFor={'email'}>
