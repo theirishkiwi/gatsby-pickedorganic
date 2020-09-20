@@ -160,7 +160,6 @@ class TestForm extends React.Component {
                             component="input"
                             type={'radio'}
                             required={true}
-                            defaultChecked
                             onChange={this.handleChange}
                             id={'weekly'}
                             value={'weekly'}
@@ -218,7 +217,14 @@ class TestForm extends React.Component {
                     </div>
                   </div>
 
-              <div>{this.state.showAddress ? <Address /> : null}</div>
+              <div>
+                {
+                  this.state.showAddress ? 
+                  <Address 
+                    onChange={this.handleChange}
+                  /> : null
+                }
+              </div>
 
               <div className="field">
                 <label className="label" htmlFor={'message'}>
