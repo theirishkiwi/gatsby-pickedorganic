@@ -7,29 +7,6 @@ function encode(data) {
     .join('&');
 }
 
-class Address extends React.Component {
-    render() {
-    return (
-      <div className="field">
-          <label className="label" htmlFor={'address'}>
-            Delivery Address
-          </label>
-          <sub>(£1.50 charge)</sub>
-          <div className="control">
-            <textarea
-              name={'address'}
-              className="textarea"
-              id={'address'}
-              type={'textarea'}
-              required={true}
-              placeholder={'delivery address'}
-            />
-        </div>
-      </div>
-    );
-  }
-}
-
 class TestForm extends React.Component {
   constructor(props) {
     super(props);
@@ -48,18 +25,17 @@ class TestForm extends React.Component {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({
         'form-name': form.getAttribute('name'),
-        ...this.state
+        ...this.state, /** form values */
       }),
     })
       .then(() => navigate(form.getAttribute('action')))
       .catch((error) => alert(error));
   }
   
-
   state = {
     showAddress: false
   }
-
+  
   showAddress(event) {
     if (event.target.value === "delivery") {
       this.setState({ showAddress: true });
@@ -102,7 +78,7 @@ class TestForm extends React.Component {
                   name={'name'}
                   onChange={this.handleChange}
                   id={'name'}
-                  required={true}
+                  required={false}
                   placeholder={'your name'}
                 />
               </div>
@@ -118,7 +94,7 @@ class TestForm extends React.Component {
                     name={'email'}
                     onChange={this.handleChange}
                     id={'email'}
-                    required={true}
+                    required={false}
                     placeholder={'email'}
                   />
                 </div>
@@ -134,7 +110,7 @@ class TestForm extends React.Component {
                       name={'phone'}
                       onChange={this.handleChange}
                       id={'phone'}
-                      required={true}
+                      required={false}
                       placeholder={'contact number'}
                     />
                     </div>
@@ -143,7 +119,7 @@ class TestForm extends React.Component {
                         <select
                           name={'size'}
                           className="input"
-                          required={true}
+                          required={false}
                           id={'size'}
                           onBlur={this.handleChange}>
                             <option value="" disabled defaultValue>- select size -</option>
@@ -163,7 +139,7 @@ class TestForm extends React.Component {
                             name={'frequency'}
                             component="input"
                             type={'radio'}
-                            required={true}
+                            required={false}
                             onChange={this.handleChange}
                             id={'weekly'}
                             value={'weekly'}
@@ -175,7 +151,7 @@ class TestForm extends React.Component {
                               name={'frequency'}
                               component="input"
                               type={'radio'}
-                              required={true}
+                              required={false}
                               onChange={this.handleChange}
                               id={'fortnightly'}
                               value={'fortnightly'}
@@ -197,7 +173,7 @@ class TestForm extends React.Component {
                               name={'transport'}
                               component="input"
                               type={'radio'}
-                              required={true}
+                              required={false}
                               onChange={this.handleChange}
                               id={'collection'}
                               value={'collection'}
@@ -209,7 +185,7 @@ class TestForm extends React.Component {
                               name={'transport'}
                               component="input"
                               type={'radio'}
-                              required={true}
+                              required={false}
                               onChange={this.handleChange}
                               id={'delivery'}
                               value={'delivery'}
@@ -221,7 +197,26 @@ class TestForm extends React.Component {
                     </div>
                   </div>
 
-                { this.state.showAddress ? <Address />: null }
+                { this.state.showAddress ?
+                <>
+                <div className="field">
+                  <label className="label" htmlFor={'address'}>
+                    Delivery Address
+                  </label>
+                  <sub>(£1.50 charge)</sub>
+                <div className="control">
+                  <textarea
+                    name={'address'}
+                    className="textarea"
+                    onChange={this.handleChange}
+                    value={this.state.value}
+                    id={'address'}
+                    required={false}
+                    placeholder={'delivery address'}
+                  />
+                </div>
+              </div>
+              </>: null }
 
               <div className="field">
                 <label className="label" htmlFor={'message'}>
