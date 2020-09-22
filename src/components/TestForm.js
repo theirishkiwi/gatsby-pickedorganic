@@ -13,7 +13,6 @@ class TestForm extends React.Component {
     this.state = { isValidated: false };
   }
 
-
   state = {
     showAddress: false
   }
@@ -210,7 +209,6 @@ class TestForm extends React.Component {
                     name={'address'}
                     className="textarea"
                     onChange={this.handleChange}
-                    value={this.state.value}
                     id={'address'}
                     required={false}
                     placeholder={'delivery address'}
@@ -225,8 +223,8 @@ class TestForm extends React.Component {
                 </label>
                 <div className="control">
                   <textarea
-                    className="textarea"
                     name={'message'}
+                    className="textarea"
                     onChange={this.handleChange}
                     id={'message'}
                     required={false}
