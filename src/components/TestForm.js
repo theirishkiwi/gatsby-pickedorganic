@@ -78,7 +78,7 @@ class TestForm extends React.Component {
                   name={'name'}
                   onChange={this.handleChange}
                   id={'name'}
-                  required={false}
+                  required={true}
                   placeholder={'your name'}
                 />
               </div>
