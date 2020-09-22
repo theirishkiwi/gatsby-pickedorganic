@@ -110,7 +110,7 @@ class DoNotUseForm extends React.Component {
                           required={true}
                           id={'size'}
                           onBlur={this.handleChange}>
-                            <option value="" disabled defaultValue>- select size -</option>
+                            <option value="" disabled selected hidden>- select size -</option>
                             <option value="Small">Small - £10</option>
                             <option value="Large">Large - £15</option>
                         </select>

@@ -5,7 +5,7 @@ title: Veg Club
 image: /img/jumbotron.jpg
 heading: Sustainably growing real food with a Conscience (for the local community) 
 description: >-
-  Our boxes contains between 7 and 10 items depending on size that will vary throughout the season.
+  Choose the box that suits your veg needs.
 intro:
   blurbs:
     - image: /img/small.png
@@ -23,8 +23,7 @@ intro:
 main:
   heading: How do deliveries and collections work?
   description: >
-   Wednesday afternoons?
-   As we have other commitments outside of the farm, we will have to keep our delivery/collection days flexible. We will let you know 2 weeks in advance what day we will deliver. If this doesn’t suit, just let us know and we will endeavor to find a Day that works best for you.
+    As we have other commitments outside of the farm, we will have to keep our delivery/collection days flexible. We will let you know 2 weeks in advance what day we will deliver. If this doesn’t suit, just let us know and we will endeavor to find a Day that works best for you.
   image1:
     alt: A close-up of a paper filter filled with ground coffee
     image: /img/products-grid3.jpg
@@ -58,17 +57,17 @@ pricing:
         Good for  2 people or one person who really loves their veg!'
       items:
         - 7 items of veg that vary with the season
-        - vibrant salad mix, spring onions, carrots, courgettes, tomatoes, kale mix, Aubergine and fresh herb mix. 
-        - A wee wild flower posy
+        - As well as variety of season veg this will contain a vibrant salad mix  and fresh herb mix. 
+        - A wild flower posy
         - Suitable for 2 people or one person who really loves their veg!
       plan: Small
       price: '10'
     - description: 'A large box contains about 10 items including potatoes, good for a small family or a couple who really love their veg!'
       items:
         - 10 items of veg that vary with the season
-        - Large vibrant salad mix, spring onions, courgettes, carrots, beetroot, kale mix, tomatoes, Aubergine, potatoes, chard and fresh herb mix
+        - As well as variety of season veg this will contain a large vibrant salad mix and fresh herb mix
         - Includes potatoes
-        - A wee wild flower posy
+        - A wild flower posy
         - Suitable for a small family or a couple who really lover their veg!
       plan: Large
       price: '15'
