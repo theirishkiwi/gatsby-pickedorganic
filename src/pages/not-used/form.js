@@ -7,22 +7,10 @@ function encode(data) {
     .join('&');
 }
 
-class TestForm extends React.Component {
+class DoNotUseForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = { isValidated: false };
-  }
-
-  state = {
-    showAddress: false
-  }
-  
-  showAddress(event) {
-    if (event.target.value === "delivery") {
-      this.setState({ showAddress: true });
-    } else {
-      this.setState({ showAddress: false });
-    }
   }
 
   handleChange = (e) => {
@@ -197,8 +185,6 @@ class TestForm extends React.Component {
                     </div>
                   </div>
 
-                { this.state.showAddress ?
-                <>
                 <div className="field">
                   <label className="label" htmlFor={'address'}>
                     Delivery Address
@@ -215,7 +201,6 @@ class TestForm extends React.Component {
                   />
                 </div>
               </div>
-              </>: null }
 
               <div className="field">
                 <label className="label" htmlFor={'message'}>
@@ -249,4 +234,4 @@ class TestForm extends React.Component {
   }
 }
 
-export default TestForm;
+export default DoNotUseForm;

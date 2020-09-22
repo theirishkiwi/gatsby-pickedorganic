@@ -30,6 +30,7 @@
                 type="text" 
                 name="name" 
                 id="name" 
+                required
                 placeholder="your name"
                 >
             </div>
@@ -43,6 +44,7 @@
                         type="email" 
                         name="email" 
                         id="email" 
+                        required
                         placeholder="email"
                         >
                     </div>
@@ -56,6 +58,7 @@
                     type="tel" 
                     name="phone" 
                     id="phone" 
+                    required
                     placeholder="contact number"
                     >
                 </div>
@@ -63,7 +66,12 @@
                     <label class="label" for="size">
                         Box Size
                     </label>
-                    <select name="size" class="input" id="size">
+                    <select 
+                    name="size" 
+                    class="input" 
+                    required
+                    id="size"
+                    >
                         <option value="" disabled="">- select size -</option>
                         <option value="Small">Small - £10</option>
                         <option value="Large">Large - £15</option>
@@ -82,6 +90,7 @@
                                     type="radio" 
                                     id="weekly" 
                                     value="weekly"
+                                    required
                                 >
                                  Weekly
                             </label>
@@ -92,6 +101,7 @@
                                 type="radio" 
                                 id="fortnightly" 
                                 value="fortnightly"
+                                required
                                 >
                                  Fortnightly
                                 </label>
@@ -112,6 +122,7 @@
                                         type="radio" 
                                         id="collection" 
                                         value="collection"
+                                        required
                                         >
                                          Collection
                                         </label>
@@ -122,6 +133,7 @@
                                             type="radio" 
                                             id="delivery" 
                                             value="delivery"
+                                            required
                                             >
                                              Delivery
                                             </label>
@@ -139,6 +151,7 @@
                                     name="address" 
                                     class="textarea" 
                                     id="address" 
+                                    required
                                     placeholder="delivery address"
                                     >
                                     </textarea>
