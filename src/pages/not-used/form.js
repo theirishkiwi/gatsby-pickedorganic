@@ -40,7 +40,7 @@ export default class DoNotUseForm extends React.Component {
           <div className="content">
             <h1>Join Our Veg Club!</h1>
             <form
-              name="subscription"
+              name="subscription1"
               method="post"
               action="/contact/thanks/"
               data-netlify="true"
@@ -48,7 +48,7 @@ export default class DoNotUseForm extends React.Component {
               onSubmit={this.handleSubmit}
             >
               {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-              <input type="hidden" name="form-name" value="subscription" />
+              <input type="hidden" name="form-name" value="subscription1" />
               <div hidden>
                 <label>
                   Don’t fill this out:{' '}
