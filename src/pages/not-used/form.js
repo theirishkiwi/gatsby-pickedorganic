@@ -7,7 +7,7 @@ function encode(data) {
     .join('&');
 }
 
-class DoNotUseForm extends React.Component {
+export default class DoNotUseForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = { isValidated: false };
@@ -66,7 +66,7 @@ class DoNotUseForm extends React.Component {
                   name={'name'}
                   onChange={this.handleChange}
                   id={'name'}
-                  required={true}
+                  required={false}
                   placeholder={'your name'}
                 />
               </div>
@@ -82,7 +82,7 @@ class DoNotUseForm extends React.Component {
                     name={'email'}
                     onChange={this.handleChange}
                     id={'email'}
-                    required={true}
+                    required={false}
                     placeholder={'email'}
                   />
                 </div>
@@ -98,7 +98,7 @@ class DoNotUseForm extends React.Component {
                       name={'phone'}
                       onChange={this.handleChange}
                       id={'phone'}
-                      required={true}
+                      required={false}
                       placeholder={'contact number'}
                     />
                     </div>
@@ -107,7 +107,7 @@ class DoNotUseForm extends React.Component {
                         <select
                           name={'size'}
                           className="input"
-                          required={true}
+                          required={false}
                           id={'size'}
                           onBlur={this.handleChange}>
                             <option value disabled selected hidden>- select size -</option>
@@ -127,7 +127,7 @@ class DoNotUseForm extends React.Component {
                             name={'frequency'}
                             component="input"
                             type={'radio'}
-                            required={true}
+                            required={false}
                             onChange={this.handleChange}
                             id={'weekly'}
                             value={'weekly'}
@@ -139,7 +139,7 @@ class DoNotUseForm extends React.Component {
                               name={'frequency'}
                               component="input"
                               type={'radio'}
-                              required={true}
+                              required={false}
                               onChange={this.handleChange}
                               id={'fortnightly'}
                               value={'fortnightly'}
@@ -161,7 +161,7 @@ class DoNotUseForm extends React.Component {
                               name={'transport'}
                               component="input"
                               type={'radio'}
-                              required={true}
+                              required={false}
                               onChange={this.handleChange}
                               id={'collection'}
                               value={'collection'}
@@ -173,7 +173,7 @@ class DoNotUseForm extends React.Component {
                               name={'transport'}
                               component="input"
                               type={'radio'}
-                              required={true}
+                              required={false}
                               onChange={this.handleChange}
                               id={'delivery'}
                               value={'delivery'}
@@ -196,7 +196,7 @@ class DoNotUseForm extends React.Component {
                     className="textarea"
                     onChange={this.handleChange}
                     id={'address'}
-                    required={true}
+                    required={false}
                     placeholder={'delivery address'}
                   />
                 </div>
@@ -233,5 +233,3 @@ class DoNotUseForm extends React.Component {
     );
   }
 }
-
-export default DoNotUseForm;
