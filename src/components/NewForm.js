@@ -59,8 +59,8 @@ const Frequency = () => (
 <div className="field">
     <label>Frequency</label>
   <div>
-    <input name="frequency" type="radio" id="weekly" value="weekly" required /> Weekly
-    <input name="frequency" type="radio" id="fortnightly" value="fortnightly" required /> Fortnightly
+    <input className="radio" name="frequency" type="radio" id="weekly" value="weekly" required /> Weekly
+    <input className="radio" name="frequency" type="radio" id="fortnightly" value="fortnightly" required /> Fortnightly
   </div>
 </div>
 );
@@ -72,6 +72,7 @@ function Transport() {
     <label>Transport</label>
   <div>
     <input 
+      className="radio"
       onClick={() => setAddressVisible(false)}
       name="transport" 
       type="radio" 
@@ -80,6 +81,7 @@ function Transport() {
       required 
       /> Collection
     <input 
+      className="radio"
       onClick={() => setAddressVisible(true)}
       name="transport" 
       type="radio" 
@@ -97,7 +99,7 @@ const Address = () => (
 <div className="field">
     <label>Delivery Address</label>
   <div>
-    <textarea id="address"></textarea>
+    <textarea className="textarea" id="address"></textarea>
   </div>
 </div>
 )
@@ -106,7 +108,7 @@ const Comments = () => (
 <div className="field">
     <label>Comments</label>
   <div>
-    <textarea id="comments"></textarea>
+    <textarea className="textarea" id="comments"></textarea>
   </div>
 </div>
 )
