@@ -198,8 +198,8 @@ function HandleSubmit(event) {
 }
 
 const Button = () => (
-  <div className="field">
-    <button id="subscribe">Subscribe</button>
+  <div className="buttons">
+    <button className="button is-link" id="subscribe">Subscribe</button>
   </div>
 )
 
