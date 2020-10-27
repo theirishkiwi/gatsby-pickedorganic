@@ -1,9 +1,7 @@
 // @ts-nocheck
 //
-//import { values } from 'lodash';
 import React from 'react';
 import { useState } from 'react';
-import { useInputChange } from '../components/useInputChange'
 
 /* - Form -
  1. name                 - done
@@ -115,7 +113,6 @@ const Comments = () => (
 
 function HandleSubmit(event) {
   event.preventDefault();
-  //const [links, setLinks] = useState([]);
   //
   const sizeSmall = "small"
   const sizeLarge = "large"
@@ -200,14 +197,14 @@ function HandleSubmit(event) {
           )  
 }
 
-const Button = (props) => (
+const Button = () => (
   <div>
     <button id="subscribe">Subscribe</button>
   </div>
 )
 
 
-function Form(props) {
+function NewForm(props) {
   return(
     <form onSubmit={HandleSubmit}>
           <div>
