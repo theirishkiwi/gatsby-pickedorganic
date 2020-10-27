@@ -1,5 +1,6 @@
 import React from 'react'
 import { navigate } from 'gatsby-link'
+//import Button from '../components/Button'
 
 function encode(data) {
   return Object.keys(data)
@@ -10,11 +11,16 @@ function encode(data) {
 class TestForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { isValidated: false };
+    this.state = { 
+      isValidated: false,
+      showAddress: false,
+      showButton: false
+    };
   }
 
   state = {
-    showAddress: false
+    showAddress: false,
+    showButton: false
   }
   
   showAddress(event) {
@@ -24,6 +30,70 @@ class TestForm extends React.Component {
       this.setState({ showAddress: false });
     }
   }
+
+  showButton(event) {
+    /*if (typeof obj != "object" && typeof obj != "function" || obj == null)*/
+    if (event.target.value === "small") {
+          this.setState({ showButton: true });
+          return (
+          <a href="https://gocardless.com/" title="SWD">Subscribe!</a>
+          )
+  } else if (event.target.value === "small" &&
+            event.target.value === "weekly" &&
+            event.target.value === "collection") {
+              this.setState(
+              <a href="https://gocardless.com/" title="SWC">Subscribe!</a>
+              );
+  } else if (event.target.value === "small" &&
+            event.target.value === "fortnightly" &&
+            event.target.value === "delivery") {
+              this.setState(
+            <button className="button is-link" type="submit">
+              <a href="https://gocardless.com/" title="SFD">Subscribe!</a>
+            </button>
+              );
+  } else if (event.target.value === "small" &&
+            event.target.value === "fortnightly" &&
+            event.target.value === "collection") {
+              this.setState(
+            <button className="button is-link" type="submit">
+              <a href="https://gocardless.com/" title="SFC">Subscribe!</a>
+            </button>
+              );
+  } else if (event.target.value === "large" &&
+            event.target.value === "weekly" &&
+            event.target.value === "collection") {
+              this.setState(
+            <button className="button is-link" type="submit">
+              <a href="https://gocardless.com/" title="LWC">Subscribe!</a>
+            </button>
+              );
+  } else if (event.target.value === "large" &&
+            event.target.value === "weekly" &&
+            event.target.value === "delivery") {
+              this.setState(
+            <button className="button is-link" type="submit">
+              <a href="https://gocardless.com/" title="LWD">Subscribe!</a>
+            </button>
+              );
+  } else if (event.target.value === "large" &&
+            event.target.value === "fortnightly" &&
+            event.target.value === "collection") {
+              this.setState(
+            <button className="button is-link" type="submit">
+              <a href="https://gocardless.com/" title="LFC">Subscribe!</a>
+            </button>
+              );
+  } else if (event.target.value === "large" &&
+            event.target.value === "fortnightly" &&
+            event.target.value === "delivery") {
+              this.setState(
+            <button className="button is-link" type="submit">
+              <a href="https://gocardless.com/" title="LFD">Subscribe!</a>
+            </button>
+              );
+  }
+}
 
   handleChange = (e) => {
     this.setState({ [e.target.name]: e.target.value })
@@ -67,7 +137,7 @@ class TestForm extends React.Component {
                   <input name="bot-field" onChange={this.handleChange} />
                 </label>
               </div>
-              <div className="field">
+              <div className="field" onChange={(event) => this.showButton(event)}>
                 <label className="label" htmlFor={'name'}>
                   Your name
                 </label>
@@ -83,7 +153,7 @@ class TestForm extends React.Component {
                 />
               </div>
               </div>
-              <div className="field">
+              <div className="field" onChange={(event) => this.showButton(event)}>
                 <label className="label" htmlFor={'email'}>
                   Email
                 </label>
@@ -100,7 +170,7 @@ class TestForm extends React.Component {
                 </div>
               </div>
 
-              <div className="field">
+              <div className="field" onChange={(event) => this.showButton(event)}>
                     <label className="label" htmlFor={'phone'}>
                       Contact Number
                     </label>
@@ -114,7 +184,7 @@ class TestForm extends React.Component {
                       placeholder={'contact number'}
                     />
                     </div>
-                    <div className="field">
+                    <div className="field" onChange={(event) => this.showButton(event)}>
                         <label className="label" htmlFor={'size'}>Box Size</label>
                         <select
                           name={'size'}
@@ -137,7 +207,7 @@ class TestForm extends React.Component {
                         <label className="radio">
                           <input
                             name={'frequency'}
-                            component="input"
+                            /*component="input"*/
                             type={'radio'}
                             required={true}
                             onChange={this.handleChange}
@@ -149,7 +219,7 @@ class TestForm extends React.Component {
                         <label className="radio">
                             <input
                               name={'frequency'}
-                              component="input"
+                              /*component="input"*/
                               type={'radio'}
                               required={true}
                               onChange={this.handleChange}
@@ -171,7 +241,6 @@ class TestForm extends React.Component {
                           <label className="radio">
                             <input
                               name={'transport'}
-                              component="input"
                               type={'radio'}
                               required={true}
                               onChange={this.handleChange}
@@ -183,7 +252,6 @@ class TestForm extends React.Component {
                         <label className="radio">
                             <input
                               name={'transport'}
-                              component="input"
                               type={'radio'}
                               required={true}
                               onChange={this.handleChange}
@@ -232,11 +300,13 @@ class TestForm extends React.Component {
                   />
                 </div>
               </div>
-
               <div className="buttons">
+               { this.state.showButton }
+               <a href="https://w3docs.com">
                 <button className="button is-link" type="submit">
                   Subscribe!
                 </button>
+                </a>
                 <button className="button is-link" type="reset">
                   Reset
                 </button>

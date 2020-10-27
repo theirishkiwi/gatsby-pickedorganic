@@ -6,7 +6,8 @@ import Features from '../components/Features'
 import Testimonials from '../components/Testimonials'
 import Pricing from '../components/Pricing'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
-import ConditionalForm from '../components/TestForm'
+//import ConditionalForm from '../components/TestForm'
+import ConditionalForm from '../components/NewForm'
 
 export const ProductPageTemplate = ({
   link,
