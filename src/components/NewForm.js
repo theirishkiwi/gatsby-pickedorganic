@@ -24,29 +24,29 @@ import { useState } from 'react';
  */
 
 const Name = () => (
-<div>
-   <label>Name</label>
-    <input id="name" type="text" required></input>
+<div className="field">
+   <label className="label">Name</label>
+    <input className="input" id="name" type="text" required></input>
 </div>
 );
 
 const Email = () => (
-<div>
-   <label>Email</label>
-  <input id="email" type="email" required></input>
+<div className="field">
+   <label className="label">Email</label>
+  <input className="input" id="email" type="email" required></input>
 </div>
 );
 
 const Phone = () => (
-<div>
-   <label>Phone</label>
-  <input id="phone" pattern="^\d{11}$" required></input>
+<div className="field">
+   <label className="label">Phone</label>
+  <input className="input" id="phone" pattern="^\d{11}$" required></input>
 </div>
 );
 
 const BoxSize = () => (
-<div>
-    <label>Box Size</label>
+<div className="field">
+    <label className="label">Box Size</label>
     <select id="size" required={true}>
         <option value="" disabled selected hidden>- select size -</option>
         <option value="small">Small - £10</option>
@@ -56,7 +56,7 @@ const BoxSize = () => (
 );
 
 const Frequency = () => (
-<div>
+<div className="field">
     <label>Frequency</label>
   <div>
     <input name="frequency" type="radio" id="weekly" value="weekly" required /> Weekly
@@ -68,7 +68,7 @@ const Frequency = () => (
 function Transport() {
   const [addressVisible, setAddressVisible] = useState(false);
   return(
-<div >
+<div className="field">
     <label>Transport</label>
   <div>
     <input 
@@ -94,7 +94,7 @@ function Transport() {
 };
 
 const Address = () => (
-<div>
+<div className="field">
     <label>Delivery Address</label>
   <div>
     <textarea id="address"></textarea>
@@ -103,7 +103,7 @@ const Address = () => (
 )
 
 const Comments = () => (
-<div>
+<div className="field">
     <label>Comments</label>
   <div>
     <textarea id="comments"></textarea>
@@ -198,7 +198,7 @@ function HandleSubmit(event) {
 }
 
 const Button = () => (
-  <div>
+  <div className="field">
     <button id="subscribe">Subscribe</button>
   </div>
 )
